@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import './App.css';
 
 // Context
-import { StateManagement } from './components/Context/StateManagement';
+import { MyStateManagement } from './components/Context/MyStateManagement';
 // Components
 import Homepage from './components/Homepage';
 
@@ -11,18 +11,18 @@ import Homepage from './components/Homepage';
 const App = () => {
 
     // Initial State Management
-    const [name, setName] = useState('');
+    const [name, setName] = useState('initial state');
 
     return (
         <BrowserRouter>
-            <StateManagement.Provider value={{
+            <MyStateManagement.Provider value={{
                 name, setName
             }}>
                 <div className='App'>
                     <Homepage/>
                 </div>
 
-            </StateManagement.Provider>
+            </MyStateManagement.Provider>
         </BrowserRouter>
     );
 };
