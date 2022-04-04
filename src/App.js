@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
 
+// Components
+import Homepage from './components/Homepage';
+
 
 const App = () => {
   return (
-      <div>
-        <h1> Portfolio Tracker </h1>
-      </div>
+      <>
+        <Homepage />
+      </>
   );
 };
 
