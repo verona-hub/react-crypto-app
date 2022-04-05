@@ -1,0 +1,84 @@
+:root {
+    --black: #000;
+    --blue: #093545;
+    --blue_light: #07789f;
+    --blue_dark: #04042b;
+    --cream: #eee8e6;
+    --green: #027502;
+    --yellow: #f0c14b;
+    --white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    height: 100%;
+    line-height: 24px;
+    overflow: scroll;
+    position: relative;
+}
+
+button,
+.button {
+    background-color: var(--blue);
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto;
+    padding: 10px 30px;
+}
+
+/*
+Homepage
+*/
+
+.Homepage {
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.Homepage h1,
+.Homepage h3 {
+    margin: 40px 0;
+}
+
+/*
+Search
+*/
+
+.Search form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Search input[type="text"] {
+    background-clip: padding-box;
+    background-color: var(--cream);
+    border: 1px solid var(--blue_dark);
+    border-radius: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    line-height: inherit;
+    margin: 20px 30px;
+    outline: none;
+    padding: 7px;
+    max-width: 300px;
+    word-break: normal;
+}
+
+.Search input[type="text"]:focus {
+    background-color: var(--white);
+    /*border: 1px solid var(--green);*/
+}

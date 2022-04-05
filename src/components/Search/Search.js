@@ -3,39 +3,47 @@ import React, { useContext } from 'react';
 // Context
 import { MyStateManagement } from '../Context/MyStateManagement';
 
+
 const Search = () => {
 
+    // Import state from Context
     const {
-        name, setName
+        coin, setCoin
     } = useContext(MyStateManagement)
 
-    // const onFormSubmit = (e) => {
-    //     e.preventDefault();
-    //
-    //     console.log('Form submitted...')
-    //     setName(e.target.value);
-    //     console.log(name)
-    // };
+    const onFormSubmit = e => {
+        console.log('Form submitted...')
+        console.log(coin)
 
-    const onInputChange = (e) => {
+        setCoin('');
         e.preventDefault();
-        setName(e.target.value);
+    };
+
+    const onInputChange = e => {
+        setCoin(e.target.value);
+        e.preventDefault();
     };
 
 
     return (
         <section className="Search">
-            <form>
+            <form onSubmit={onFormSubmit}>
                 <input
                     id='coin'
                     onChange={onInputChange}
-                    placeholder='Search a cryptocurrency here...'
+                    placeholder='Search here...'
                     type='text'
-                    value={name}
+                    value={coin}
+                />
+                <input
+                    className='button'
+                    type='submit'
+                    value='Search'
                 />
             </form>
         </section>
     );
 };
+
 
 export default Search;
