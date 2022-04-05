@@ -74,7 +74,7 @@ Search
     margin: 20px 30px;
     outline: none;
     padding: 7px;
-    max-width: 300px;
+    width: 200px;
     word-break: normal;
 }
 

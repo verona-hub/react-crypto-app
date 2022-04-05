@@ -8,18 +8,21 @@ const Search = () => {
 
     // Import state from Context
     const {
-        coin, setCoin
+        coin, setCoin,
+        search, setSearch
     } = useContext(MyStateManagement)
 
     const onFormSubmit = e => {
         console.log('Form submitted...')
-        console.log(coin)
+        console.log(`Search: ${search}`)
+        console.log(`coin: ${coin}`)
 
-        setCoin('');
-        e.preventDefault();
+        setSearch('');
+        // e.preventDefault();
     };
 
     const onInputChange = e => {
+        setSearch(e.target.value);
         setCoin(e.target.value);
         e.preventDefault();
     };
@@ -29,11 +32,11 @@ const Search = () => {
         <section className="Search">
             <form onSubmit={onFormSubmit}>
                 <input
-                    id='coin'
+                    id='search'
                     onChange={onInputChange}
-                    placeholder='Search here...'
+                    placeholder='Search a currency here...'
                     type='text'
-                    value={coin}
+                    value={search}
                 />
                 <input
                     className='button'
@@ -41,6 +44,9 @@ const Search = () => {
                     value='Search'
                 />
             </form>
+
+            { coin }
+
         </section>
     );
 };
