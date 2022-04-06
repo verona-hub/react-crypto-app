@@ -80,14 +80,17 @@ Search
 }
 
 .Search input[type="text"]:focus {
-    opacity: 0.8;
+    opacity: 0.9;
+}
 
+.Search input[type="text"]:hover {
+    opacity: 0.7;
 }
 
 .Search img {
-    opacity: 1;
     position: relative;
-    left: 58px;
-    top: 4px;
+    right: 90px;
+    top: 48px;
     width: 18px;
 }
+

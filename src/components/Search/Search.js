@@ -10,11 +10,11 @@ const Search = () => {
     // Import state from Context
     const {
         coin, setCoin
-    } = useContext(MyStateManagement)
+    } = useContext(MyStateManagement);
 
     const onFormSubmit = e => {
-        console.log('Form submitted...')
-        console.log(`coin: ${coin}`)
+        console.log('Form submitted...');
+        console.log(`coin: ${coin}`);
 
         setCoin('');
         e.preventDefault();
@@ -29,18 +29,14 @@ const Search = () => {
     return (
         <section className="Search">
             <form onSubmit={onFormSubmit}>
-
-                <div className='search-wrapper'>
-                    <img src={ searchIcon } alt='Searching icon'/>
-                    <input
-                        id='search'
-                        onChange={ onInputChange }
-                        placeholder='Search a currency here'
-                        type='text'
-                        value={ coin }
-                    />
-                </div>
-
+                <img src={ searchIcon } alt='Searching icon'/>
+                <input
+                    id='search'
+                    onChange={ onInputChange }
+                    placeholder='Search a currency here'
+                    type='text'
+                    value={ coin }
+                />
                 <input
                     className='button'
                     type='submit'
