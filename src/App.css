@@ -3,7 +3,7 @@
     --blue: #093545;
     --blue_light: #07789f;
     --blue_dark: #04042b;
-    --cream: #eee8e6;
+    --cream: #eeedec;
     --green: #027502;
     --yellow: #f0c14b;
     --white: #fff;
@@ -66,19 +66,28 @@ Search
 .Search input[type="text"] {
     background-clip: padding-box;
     background-color: var(--cream);
-    border: 1px solid var(--blue_dark);
+    border: none;
     border-radius: 5px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     line-height: inherit;
     margin: 20px 30px;
     outline: none;
-    padding: 7px;
-    width: 200px;
+    opacity: 1;
+    padding: 7px 0 7px 35px;
+    width: 220px;
     word-break: normal;
 }
 
 .Search input[type="text"]:focus {
-    background-color: var(--white);
-    /*border: 1px solid var(--green);*/
+    opacity: 0.8;
+
+}
+
+.Search img {
+    opacity: 1;
+    position: relative;
+    left: 58px;
+    top: 4px;
+    width: 18px;
 }

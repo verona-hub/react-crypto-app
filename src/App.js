@@ -12,13 +12,11 @@ const App = () => {
 
     // Initial State Management
     const [coin, setCoin] = useState('');
-    const [search, setSearch] = useState('');
 
     return (
         <BrowserRouter>
             <MyStateManagement.Provider value={{
-                coin, setCoin,
-                search, setSearch
+                coin, setCoin
             }}>
 
                 <div className='App'>
