@@ -11,13 +11,15 @@ const Search = () => {
 
         const config = {
             method: 'get',
-            url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=5000&convert=USD',
+            url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=5000&convert=USD/',
             headers: {
                 "Access-Control-Allow-Headers": "*",
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Methods": "*",
+                'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'X-CMC_PRO_API_KEY': process.env.CMC_PRO_API_KEY
+                'X-CMC_PRO_API_KEY': process.env.CMC_PRO_API_KEY,
+                'mode':'cors'
             }
         };
 
