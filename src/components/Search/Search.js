@@ -1,7 +1,6 @@
 import React  from 'react';
 import axios from 'axios';
 
-
 // Components
 import SearchForm from "./SearchForm";
 
@@ -12,10 +11,10 @@ const Search = () => {
 
         const config = {
             method: 'get',
-            url: 'sandbox-api.coinmarketcap.com',
+            url: 'https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
             headers: {
                 "Access-Control-Allow-Origin": "*",
-                'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c'
+                'X-CMC_PRO_API_KEY': process.env.CMC_PRO_API_KEY
             }
         };
 

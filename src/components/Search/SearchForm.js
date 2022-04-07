@@ -16,11 +16,12 @@ const SearchForm = ({ searchCoin }) => {
         console.log('Form submitted...');
         console.log(`Searched coin: ${coin}`);
 
+        // Send the input coin to the CoinMarketCap API
         searchCoin(coin);
+        // Set the current coin to the initial value
         setCoin('');
         e.preventDefault();
     };
-
 
     const onInputChange = e => {
         setCoin(e.target.value);
