@@ -12,7 +12,7 @@ const App = () => {
 
     // Initial State Management
     const [coin, setCoin] = useState('');
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState('')
 
     return (
         <BrowserRouter>
