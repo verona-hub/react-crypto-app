@@ -1,48 +1,39 @@
-import React, { useContext } from 'react';
-import searchIcon from '../../img/search.png';
+import React  from 'react';
+import axios from 'axios';
 
-// Context
-import { MyStateManagement } from '../Context/MyStateManagement';
+
+// Components
+import SearchForm from "./SearchForm";
 
 
 const Search = () => {
 
-    // Import state from Context
-    const {
-        coin, setCoin
-    } = useContext(MyStateManagement);
+    const searchCoin = async () => {
 
-    const onFormSubmit = e => {
-        console.log('Form submitted...');
-        console.log(`coin: ${coin}`);
+        const config = {
+            method: 'get',
+            url: 'sandbox-api.coinmarketcap.com',
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                'X-CMC_PRO_API_KEY': 'b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c'
+            }
+        };
 
-        setCoin('');
-        e.preventDefault();
+        try {
+            await axios(config)
+                .then( response => {
+                    console.log(response);
+
+                })
+
+        } catch (err) {
+            console.log(err)
+        }
     };
-
-    const onInputChange = e => {
-        setCoin(e.target.value);
-        e.preventDefault();
-    };
-
 
     return (
         <section className="Search">
-            <form onSubmit={onFormSubmit}>
-                <img src={ searchIcon } alt='Searching icon'/>
-                <input
-                    id='search'
-                    onChange={ onInputChange }
-                    placeholder='Search a currency here'
-                    type='text'
-                    value={ coin }
-                />
-                <input
-                    className='button'
-                    type='submit'
-                    value='Search'
-                />
-            </form>
+            <SearchForm searchCoin={ searchCoin } />
         </section>
     );
 };
