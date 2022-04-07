@@ -13,7 +13,9 @@ const Search = () => {
             method: 'get',
             url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=5000&convert=USD',
             headers: {
+                "Access-Control-Allow-Headers": "*",
                 "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "*",
                 'Content-Type': 'application/json',
                 'X-CMC_PRO_API_KEY': process.env.CMC_PRO_API_KEY
             }
@@ -24,6 +26,7 @@ const Search = () => {
                 .then( response => {
                     console.log(response);
                 })
+                .then(x => new Promise(resolve => setTimeout(() => resolve(x), 1000)))
 
         } catch (err) {
             console.log(err)
