@@ -35,16 +35,23 @@ const Main = () => {
                     console.log(response.data);
                     setInitialCoins(response.data);
                 })
-
         } catch (err) {
             console.log(err)
         }
-    }, [config, setInitialCoins]);
+    }, []);
 
 
     return (
         <div>
-            <h1> Main Component </h1>
+            <h3> This is Main component </h3>
+            {
+                initialCoins.map(initialCoin => (
+                    <div key={initialCoin.id}>
+                        <img src={initialCoin.image} alt='coin logo'/>
+                    </div>
+                ))
+
+            }
         </div>
     );
 };

@@ -11,7 +11,7 @@ import Homepage from './components/Homepage';
 const App = () => {
 
     // Initial State Management
-    const [initialCoins, setInitialCoins] = useState({});
+    const [initialCoins, setInitialCoins] = useState([]);
     const [coin, setCoin] = useState('');
     const [search, setSearch] = useState('');
 
