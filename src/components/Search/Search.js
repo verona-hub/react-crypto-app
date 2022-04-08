@@ -1,32 +1,41 @@
-import React  from 'react';
-import axios from 'axios';
+import React, { useContext } from 'react';
 
+// Context
+import { MyStateManagement } from '../Context/MyStateManagement';
 // Components
 import SearchForm from "./SearchForm";
 
 
 const Search = () => {
 
-    const searchCoin = () => {
+    // Import state from Context
+    const {
+        initialCoins, setInitialCoins,
+        coin, setCoin,
+        search, setSearch
+    } = useContext(MyStateManagement);
 
+    const searchCoin = async () => {
+        console.log('Coin searched')
         // const config = {
-        //     method: 'get',
-        //     url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/map',
+        //     method: 'GET',
+        //     url: 'https://api.coingecko.com/api/v3/coins/markets',
+        //     params: {
+        //         vs_currency: 'usd',
+        //         order: 'market_cap_desc',
+        //         per_page: 5,
+        //         page: 1
+        //     },
         //     headers: {
-        //         "Access-Control-Allow-Headers": "*",
-        //         "Access-Control-Allow-Origin": "*",
-        //         "Access-Control-Allow-Methods": "*",
         //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json',
-        //         'X-CMC_PRO_API_KEY': process.env.CMC_PRO_API_KEY,
-        //         'mode':'cors'
+        //         'Content-Type': 'application/json'
         //     }
         // };
         //
         // try {
         //     await axios(config)
         //         .then( response => {
-        //             console.log(response);
+        //             console.log(response.data);
         //         })
         //
         // } catch (err) {
@@ -36,7 +45,7 @@ const Search = () => {
 
     return (
         <section className="Search">
-            <SearchForm />
+            <SearchForm searchCoin={searchCoin }/>
         </section>
     );
 };

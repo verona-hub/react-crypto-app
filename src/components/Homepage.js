@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import Search from "./Search/Search";
+import Main from "./Main";
 
 
 const Homepage = () => {
@@ -13,6 +14,7 @@ const Homepage = () => {
             <h3> This is homepage component </h3>
 
             <Search />
+            <Main />
 
         </section>
     );

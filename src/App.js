@@ -11,12 +11,14 @@ import Homepage from './components/Homepage';
 const App = () => {
 
     // Initial State Management
+    const [initialCoins, setInitialCoins] = useState({});
     const [coin, setCoin] = useState('');
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState('');
 
     return (
         <BrowserRouter>
             <MyStateManagement.Provider value={{
+                initialCoins, setInitialCoins,
                 coin, setCoin,
                 search, setSearch
             }}>
