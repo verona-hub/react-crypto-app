@@ -97,6 +97,7 @@ MarketItems
 .MarketItems {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -106,7 +107,15 @@ MarketItem
 */
 
 .MarketItem {
-    margin: 20px;
+    align-items: center;
+    border-top: 1px solid;
+    display: flex;
+    padding: 10px 0;
+    width: 800px;
+}
+
+.MarketItem * {
+    padding: 20px 10px;
 }
 
 .MarketItem img {

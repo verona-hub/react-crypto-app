@@ -9,15 +9,15 @@ import MarketItem from "./MarketItem";
 const MarketItems = () => {
 
     // Import state from Context
-    const { initialCoins } = useContext(MyStateManagement);
+    const { marketData } = useContext(MyStateManagement);
 
     return (
         <div className='MarketItems'>
             {
-                initialCoins.map(initialCoin => (
+                marketData.map(item => (
                     <MarketItem
-                        initialCoin={ initialCoin }
-                        key={ initialCoin.id }
+                        item={item}
+                        key={item.id}
                     />
                 ))
             }

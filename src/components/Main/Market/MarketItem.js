@@ -1,13 +1,16 @@
 import React from 'react';
 
 
-const MarketItem = ({ initialCoin }) => {
+const MarketItem = ({ item }) => {
 
     return (
         <div className='MarketItem'>
-            <p> {initialCoin.id} </p>
-            <img src={initialCoin.image} alt='coin logo'/>
-            <p> {initialCoin.current_price} </p>
+            <p> {item.market_cap_rank} </p>
+            <img src={item.image} alt='coin logo'/>
+            <p> {item.name} </p>
+            <p> {item.symbol} </p>
+            <p> &#36;{item.current_price} </p>
+            <p> &#36;{item.market_cap} </p>
         </div>
     );
 };

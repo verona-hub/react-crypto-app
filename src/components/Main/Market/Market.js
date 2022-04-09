@@ -10,7 +10,7 @@ import MarketItems from "./MarketItems";
 const Market = () => {
 
     // Import state from Context
-    const { setInitialCoins } = useContext(MyStateManagement);
+    const { marketData, setMarketData } = useContext(MyStateManagement);
 
     const config = {
         method: 'GET',
@@ -27,16 +27,26 @@ const Market = () => {
         }
     };
 
+    // useEffect( () => {
+    //     try {
+    //          axios(config)
+    //             .then( response => {
+    //                 console.log(response.data[0]);
+    //                 setMarketData(response.data);
+    //             })
+    //     } catch (err) {
+    //         console.log(err)
+    //     }
+    // }, []);
+
     useEffect(() => {
-        try {
-            axios(config)
-                .then( response => {
-                    console.log(response.data[0]);
-                    setInitialCoins(response.data);
-                })
-        } catch (err) {
-            console.log(err)
+        async function fetchData() {
+            // You can await here
+            const response = await axios(config);
+            console.log(response.data)
+            setMarketData(response.data);
         }
+        fetchData();
     }, []);
 
 

@@ -10,7 +10,6 @@ const Search = () => {
 
     // Import state from Context
     const {
-        initialCoins, setInitialCoins,
         coin, setCoin,
         search, setSearch
     } = useContext(MyStateManagement);
