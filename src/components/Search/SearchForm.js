@@ -32,7 +32,7 @@ const SearchForm = ({ searchCoin }) => {
     };
 
     return (
-        <form onSubmit={onFormSubmit}>
+        <form onSubmit={onFormSubmit} className='SearchForm'>
             <img src={ searchIcon } alt='Searching icon'/>
             <input
                 id='search'

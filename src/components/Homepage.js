@@ -2,7 +2,7 @@ import React from 'react';
 
 // Components
 import Search from "./Search/Search";
-import Main from "./Main";
+import Main from "./Main/Main";
 
 
 const Homepage = () => {

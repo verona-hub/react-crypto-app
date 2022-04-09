@@ -1,17 +1,16 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import axios from "axios";
 
 // Context
-import { MyStateManagement } from './Context/MyStateManagement';
+import { MyStateManagement } from '../../Context/MyStateManagement';
+// Components
+import MarketItems from "./MarketItems";
 
-const Main = () => {
+
+const Market = () => {
 
     // Import state from Context
-    const {
-        initialCoins, setInitialCoins,
-        coin, setCoin,
-        search, setSearch
-    } = useContext(MyStateManagement);
+    const { setInitialCoins } = useContext(MyStateManagement);
 
     const config = {
         method: 'GET',
@@ -19,7 +18,7 @@ const Main = () => {
         params: {
             vs_currency: 'usd',
             order: 'market_cap_desc',
-            per_page: 5,
+            per_page: 10,
             page: 1
         },
         headers: {
@@ -32,7 +31,7 @@ const Main = () => {
         try {
             axios(config)
                 .then( response => {
-                    console.log(response.data);
+                    console.log(response.data[0]);
                     setInitialCoins(response.data);
                 })
         } catch (err) {
@@ -42,18 +41,11 @@ const Main = () => {
 
 
     return (
-        <div>
-            <h3> This is Main component </h3>
-            {
-                initialCoins.map(initialCoin => (
-                    <div key={initialCoin.id}>
-                        <img src={initialCoin.image} alt='coin logo'/>
-                    </div>
-                ))
-
-            }
-        </div>
+        <section className='Market'>
+            <MarketItems />
+        </section>
     );
 };
 
-export default Main;
+
+export default Market;

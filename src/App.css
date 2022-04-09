@@ -83,10 +83,32 @@ Search
     opacity: 0.6;
 }
 
-.Search img {
+.SearchForm img {
     position: relative;
     right: 90px;
     top: 48px;
     width: 18px;
 }
 
+/*
+MarketItems
+*/
+
+.MarketItems {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*
+MarketItem
+*/
+
+.MarketItem {
+    margin: 20px;
+}
+
+.MarketItem img {
+    width: 48px;
+}
