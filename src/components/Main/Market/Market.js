@@ -27,18 +27,6 @@ const Market = () => {
         }
     };
 
-    // useEffect( () => {
-    //     try {
-    //          axios(config)
-    //             .then( response => {
-    //                 console.log(response.data[0]);
-    //                 setMarketData(response.data);
-    //             })
-    //     } catch (err) {
-    //         console.log(err)
-    //     }
-    // }, []);
-
     useEffect(() => {
         async function fetchData() {
             // You can await here
@@ -53,6 +41,7 @@ const Market = () => {
 
     return (
         <section className='Market'>
+            <h2> Today's Cryptocurrency Prices by Market Cap </h2>
             <MarketTable />
         </section>
     );

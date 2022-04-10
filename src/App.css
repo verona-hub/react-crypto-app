@@ -90,36 +90,23 @@ Search
     width: 18px;
 }
 
+
+
 /*
-MarketItems
+Market
 */
 
-.MarketItems {
-    /*align-items: center;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*flex-wrap: wrap;*/
+.Market {
+    margin: 80px;
 }
 
-/*
-MarketItem
-*/
+.MarketTable {
+    background-color: lightblue !important;
+}
+
 .Market td.name {
     display: flex;
     align-items: center !important;
-}
-
-.MarketItem {
-    /*align-items: center;*/
-    /*border-top: 1px solid;*/
-    /*display: flex;*/
-    /*padding: 10px 0;*/
-    /*width: 800px;*/
-}
-
-.MarketItem * {
-    /*padding: 20px 10px;*/
 }
 
 .Market img {
@@ -133,4 +120,14 @@ Table
 
 .oMwtR {
     text-align: center !important;
+}
+
+/*
+Mobile
+*/
+
+@media (max-width: 768px) {
+    .Market {
+        margin: 10px;
+    }
 }

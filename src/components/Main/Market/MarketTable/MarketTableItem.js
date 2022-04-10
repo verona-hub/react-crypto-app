@@ -26,4 +26,5 @@ const MarketTableItem = ({ item }) => {
     );
 };
 
+
 export default MarketTableItem;
