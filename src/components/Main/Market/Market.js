@@ -43,10 +43,11 @@ const Market = () => {
         async function fetchData() {
             // You can await here
             const response = await axios(config);
-            console.log(response.data)
+            console.log(response.data[0])
             setMarketData(response.data);
         }
-        fetchData();
+        // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
+        fetchData().then();
     }, []);
 
 

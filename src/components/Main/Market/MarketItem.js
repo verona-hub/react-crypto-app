@@ -3,14 +3,24 @@ import React from 'react';
 
 const MarketItem = ({ item }) => {
 
+    const {
+        market_cap_rank,
+        image, name,
+        symbol, current_price,
+        Market_cap, price_change_percentage_24h,
+        circulating_supply
+    } = item;
+
     return (
         <div className='MarketItem'>
-            <p> {item.market_cap_rank} </p>
-            <img src={item.image} alt='coin logo'/>
-            <p> {item.name} </p>
-            <p> {item.symbol} </p>
-            <p> &#36;{item.current_price} </p>
-            <p> &#36;{item.market_cap} </p>
+            <p> {market_cap_rank} </p>
+            <img src={image} alt='coin logo'/>
+            <p> {name} </p>
+            <p> {symbol.toUpperCase()} </p>
+            <p> Price: &#36;{current_price} </p>
+            <p> Market Cap: &#36;{Market_cap} </p>
+            <p> 24h &#37; {price_change_percentage_24h.toFixed(2)} </p>
+            <p> Circulating Supply: {circulating_supply} {item.symbol.toUpperCase()} </p>
         </div>
     );
 };
