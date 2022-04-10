@@ -4,7 +4,6 @@ import axios from "axios";
 // Context
 import { MyStateManagement } from '../../Context/MyStateManagement';
 // Components
-import MarketItems from "./MarketItems";
 import MarketTable from "./MarketTable";
 
 
@@ -55,7 +54,6 @@ const Market = () => {
     return (
         <section className='Market'>
             <MarketTable />
-            <MarketItems />
         </section>
     );
 };
