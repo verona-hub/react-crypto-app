@@ -7,7 +7,7 @@ const MarketItem = ({ item }) => {
         market_cap_rank,
         image, name,
         symbol, current_price,
-        Market_cap, price_change_percentage_24h,
+        market_cap, price_change_percentage_24h,
         circulating_supply
     } = item;
 
@@ -18,7 +18,7 @@ const MarketItem = ({ item }) => {
             <p> {name} </p>
             <p> {symbol.toUpperCase()} </p>
             <p> Price: &#36;{current_price} </p>
-            <p> Market Cap: &#36;{Market_cap} </p>
+            <p> Market Cap: &#36;{market_cap} </p>
             <p> 24h &#37; {price_change_percentage_24h.toFixed(2)} </p>
             <p> Circulating Supply: {circulating_supply} {item.symbol.toUpperCase()} </p>
         </div>

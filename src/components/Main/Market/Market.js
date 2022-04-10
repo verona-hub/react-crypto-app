@@ -5,12 +5,13 @@ import axios from "axios";
 import { MyStateManagement } from '../../Context/MyStateManagement';
 // Components
 import MarketItems from "./MarketItems";
+import MarketTable from "./MarketTable";
 
 
 const Market = () => {
 
     // Import state from Context
-    const { marketData, setMarketData } = useContext(MyStateManagement);
+    const { setMarketData } = useContext(MyStateManagement);
 
     const config = {
         method: 'GET',
@@ -53,6 +54,7 @@ const Market = () => {
 
     return (
         <section className='Market'>
+            <MarketTable />
             <MarketItems />
         </section>
     );
