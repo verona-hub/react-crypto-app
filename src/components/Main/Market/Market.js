@@ -3,8 +3,11 @@ import axios from "axios";
 
 // Context
 import { MyStateManagement } from '../../Context/MyStateManagement';
+// Semantic-UI
+import { Container } from 'semantic-ui-react'
 // Components
 import MarketTable from "./MarketTable";
+
 
 
 const Market = () => {
@@ -40,10 +43,10 @@ const Market = () => {
 
 
     return (
-        <section className='Market'>
+        <Container className='Market'>
             <h2> Today's Cryptocurrency Prices by Market Cap </h2>
             <MarketTable />
-        </section>
+        </Container>
     );
 };
 

@@ -1,6 +1,7 @@
-import React, { useEffect }  from 'react';
+import React from 'react';
+
+// Semantic-UI
 import { Table } from "semantic-ui-react";
-import axios from "axios";
 
 
 const MarketTableItem = ({ item }) => {
@@ -15,8 +16,6 @@ const MarketTableItem = ({ item }) => {
 
     // Check if 24hr price change is positive or negative and add the according className
     const numClass = Math.sign(price_change_percentage_24h) === -1 ? `negative-number` : `positive-number`;
-
-
 
     return (
         <Table.Row className="MarketTableItem">

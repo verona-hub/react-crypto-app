@@ -1,11 +1,9 @@
 :root {
     --black: #000;
     --blue: #093545;
-    --blue_light: #07789f;
-    --blue_dark: #04042b;
     --cream: #eeedec;
-    --green: #027502;
-    --yellow: #f0c14b;
+    --green: #30b630;
+    --red: #e52929;
     --white: #fff;
 }
 
@@ -37,6 +35,25 @@ button,
     font-size: 16px;
     margin: 20px auto;
     padding: 10px 30px;
+}
+
+/*
+Navbar
+*/
+
+.ui.menu {
+    align-items: center;
+    justify-content: center;
+}
+
+nav img {
+    position: relative;
+    right: 15px;
+    width: 40px;
+}
+
+.segment {
+    border-radius: 0 !important;
 }
 
 /*
@@ -90,28 +107,13 @@ Search
     width: 18px;
 }
 
-
-
 /*
 Market
 */
 
-.Market {
-    margin: 80px;
-}
-
-.MarketTable {
-    background-color: lightblue !important;
-}
-
-.Market td.name {
-    display: flex;
-    align-items: center !important;
-}
-
 .Market img {
     margin: 0 10px;
-    width: 36px;
+    width: 28px;
 }
 
 /*
@@ -122,20 +124,21 @@ Table
     text-align: center !important;
 }
 
+.Market td.name {
+    display: flex;
+    align-items: center !important;
+}
+
 .MarketTableItem .negative-number {
-    color: red !important;
+    color: var(--red) !important;
 }
 
 .MarketTableItem .positive-number {
-    color: green !important;
+    color: var(--green) !important;
 }
 
 /*
 Mobile
 */
 
-@media (max-width: 768px) {
-    .Market {
-        margin: 10px;
-    }
-}
+@media (max-width: 768px) {}

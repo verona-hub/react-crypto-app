@@ -6,9 +6,7 @@ import Market from "./Market/Market";
 
 const Main = () => {
     return (
-        <main>
-            <Market />
-        </main>
+        <Market />
     );
 };
 

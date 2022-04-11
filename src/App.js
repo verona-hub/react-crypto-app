@@ -6,6 +6,7 @@ import './App.css';
 import { MyStateManagement } from './components/Context/MyStateManagement';
 // Components
 import Homepage from './components/Homepage';
+import Navbar from "./components/Navbar/Navbar";
 
 
 const App = () => {
@@ -14,16 +15,19 @@ const App = () => {
     const [marketData, setMarketData] = useState([]);
     const [coin, setCoin] = useState('');
     const [search, setSearch] = useState('');
+    const [activeNav, setActiveNav] = useState('home');
 
     return (
         <BrowserRouter>
             <MyStateManagement.Provider value={{
                 marketData, setMarketData,
                 coin, setCoin,
-                search, setSearch
+                search, setSearch,
+                activeNav, setActiveNav
             }}>
 
                 <div className='App'>
+                    <Navbar />
                     <Homepage/>
                 </div>
 
