@@ -122,6 +122,14 @@ Table
     text-align: center !important;
 }
 
+.MarketTableItem .negative-number {
+    color: red !important;
+}
+
+.MarketTableItem .positive-number {
+    color: green !important;
+}
+
 /*
 Mobile
 */
