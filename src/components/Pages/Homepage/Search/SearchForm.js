@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import searchIcon from "../../img/search.png";
+import searchIcon from "../../../../img/search.png";
 
 // Context
-import { MyStateManagement } from '../Context/MyStateManagement';
+import { MyStateManagement } from '../../../Context/MyStateManagement';
 
 
 const SearchForm = ({ searchCoin }) => {

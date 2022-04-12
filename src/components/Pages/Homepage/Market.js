@@ -6,7 +6,7 @@ import { MyStateManagement } from '../../Context/MyStateManagement';
 // Semantic-UI
 import { Container } from 'semantic-ui-react'
 // Components
-import MarketTable from "./MarketTable";
+import MarketTable from "./Market/MarketTable";
 
 
 
@@ -15,6 +15,7 @@ const Market = () => {
     // Import state from Context
     const { setMarketData } = useContext(MyStateManagement);
 
+    // Api request params: get market data from CoinGecko
     const config = {
         method: 'GET',
         url: 'https://api.coingecko.com/api/v3/coins/markets',
@@ -32,9 +33,7 @@ const Market = () => {
 
     useEffect(() => {
         async function fetchData() {
-            // You can await here
             const response = await axios(config);
-            console.log(response.data[0])
             setMarketData(response.data);
         }
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"

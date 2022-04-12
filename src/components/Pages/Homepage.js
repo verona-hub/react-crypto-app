@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Components
-import Search from "./Search/Search";
-import Main from "./Main/Main";
+import Market from "./Homepage/Market";
+import Search from "./Homepage/Search";
 
 
 const Homepage = () => {
@@ -12,10 +12,11 @@ const Homepage = () => {
 
             <h1> Portfolio Tracker </h1>
             <Search />
-            <Main />
+            <Market />
 
         </section>
     );
 };
+
 
 export default Homepage;

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Table } from "semantic-ui-react";
 
 // Context
-import { MyStateManagement } from '../../../Context/MyStateManagement';
+import { MyStateManagement } from '../../../../Context/MyStateManagement';
 // Components
 import MarketTableItem from "./MarketTableItem";
 

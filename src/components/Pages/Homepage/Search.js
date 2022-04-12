@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 
 // Context
-import { MyStateManagement } from '../Context/MyStateManagement';
+import { MyStateManagement } from '../../Context/MyStateManagement';
 // Components
-import SearchForm from "./SearchForm";
+import SearchForm from "./Search/SearchForm";
 
 
 const Search = () => {
