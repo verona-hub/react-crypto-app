@@ -4,6 +4,8 @@ import React, { useContext } from 'react';
 import { MyStateManagement } from '../../Context/MyStateManagement';
 // Components
 import ExchangesItem from "./ExchangesItem";
+// Semantic-UI
+import { Grid } from 'semantic-ui-react';
 
 
 const ExchangesItems = () => {
@@ -11,17 +13,18 @@ const ExchangesItems = () => {
     // Import state from Context
     const { exchangeData } = useContext(MyStateManagement);
 
-
     return (
         <section className="ExchangesItems">
-            {
-                exchangeData.map( item => (
-                    <ExchangesItem
-                        item={ item }
-                        key={ item.id }
-                    />
-                ))
-            }
+            <Grid container>
+                {
+                    exchangeData.map(item => (
+                        <ExchangesItem
+                            item={ item }
+                            key={ item.id }
+                        />
+                    ))
+                }
+            </Grid>
         </section>
     );
 };

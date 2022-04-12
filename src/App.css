@@ -142,15 +142,15 @@ Exchanges
 */
 
 .ExchangesItems {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    /*align-items: center;*/
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-evenly;*/
 }
 
 .ExchangesItem {
     background-color: lightblue;
-    margin: 30px;
+    /*margin: 30px;*/
 }
 
 /*
