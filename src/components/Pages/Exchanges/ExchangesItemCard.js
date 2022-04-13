@@ -3,7 +3,7 @@ import React from 'react';
 // Semantic-UI
 import { Card, Image } from 'semantic-ui-react'
 
-const ExchangesItem = ({ item }) => {
+const ExchangesItemCard = ({ item }) => {
 
     const { country, image, name, trade_volume_24h_btc,
         trust_score_rank, trust_score, url, year_established } = item;
@@ -11,7 +11,7 @@ const ExchangesItem = ({ item }) => {
     const countryDetails = country ? `${country}` : 'Unknown';
 
     return (
-        <Card className="ExchangesItem">
+        <Card className="ExchangesItemCard">
             <Image src={ image } wrapped ui={ false }/>
             <Card.Content>
                 <Card.Header> { name } </Card.Header>
@@ -33,4 +33,4 @@ const ExchangesItem = ({ item }) => {
 };
 
 
-export default ExchangesItem;
+export default ExchangesItemCard;

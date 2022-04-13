@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 // Context
 import { MyStateManagement } from '../../Context/MyStateManagement';
 // Components
-import ExchangesItem from "./ExchangesItem";
+import ExchangesItemCard from "./ExchangesItemCard";
 // Semantic-UI
 import { Grid } from 'semantic-ui-react';
 
@@ -18,7 +18,7 @@ const ExchangesItems = () => {
             <Grid container>
                 {
                     exchangeData.map(item => (
-                        <ExchangesItem
+                        <ExchangesItemCard
                             item={ item }
                             key={ item.id }
                         />
