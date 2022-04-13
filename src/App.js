@@ -17,6 +17,7 @@ const App = () => {
     // Initial State Management
     const [marketData, setMarketData] = useState([]);
     const [exchangeData, setExchangeData] = useState([]);
+    const [coinsData, setCoinsData] = useState([]);
     const [coin, setCoin] = useState('');
     const [search, setSearch] = useState('');
     const [activeNav, setActiveNav] = useState('home');
@@ -26,6 +27,7 @@ const App = () => {
             <MyStateManagement.Provider value={{
                 marketData, setMarketData,
                 exchangeData, setExchangeData,
+                coinsData, setCoinsData,
                 coin, setCoin,
                 search, setSearch,
                 activeNav, setActiveNav
