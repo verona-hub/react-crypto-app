@@ -36,7 +36,6 @@ const Wiki = () => {
 
     return (
         <section className="Wiki">
-            <h2> This is Wiki component </h2>
             <WikiItems />
         </section>
     );

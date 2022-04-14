@@ -4,6 +4,8 @@ import React, { useContext } from 'react';
 import { MyStateManagement } from '../../Context/MyStateManagement';
 // Components
 import WikiItemCard from './WikiItemCard';
+// Semantic-UI
+import { Grid } from 'semantic-ui-react';
 
 
 const WikiItems = () => {
@@ -13,15 +15,16 @@ const WikiItems = () => {
 
     return (
         <div className="WikiItems">
-            <h3> Wiki Items </h3>
-            {
-                wikiData.map( wikiItem => (
-                    <WikiItemCard
-                        wikiItem={ wikiItem }
-                        key={ wikiItem.id }
-                    />
-                ))
-            }
+            <Grid container>
+                {
+                    wikiData.map(wikiItem => (
+                        <WikiItemCard
+                            wikiItem={ wikiItem }
+                            key={ wikiItem.id }
+                        />
+                    ))
+                }
+            </Grid>
         </div>
     );
 };

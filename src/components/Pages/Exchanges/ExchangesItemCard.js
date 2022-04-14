@@ -3,11 +3,13 @@ import React from 'react';
 // Semantic-UI
 import { Card, Image } from 'semantic-ui-react'
 
-const ExchangesItemCard = ({ item }) => {
+
+const ExchangesItemCard = ({ exchangeDataItem }) => {
 
     const { country, image, name, trade_volume_24h_btc,
-        trust_score_rank, trust_score, url, year_established } = item;
+        trust_score_rank, trust_score, url, year_established } = exchangeDataItem;
 
+    // If there is no country data, display "Unknown"
     const countryDetails = country ? `${country}` : 'Unknown';
 
     return (

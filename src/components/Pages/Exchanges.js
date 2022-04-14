@@ -37,10 +37,9 @@ const Exchanges = () => {
 
 
     return (
-        <div className="Exchanges">
-            <h1> This is Exchanges page </h1>
+        <section className="Exchanges">
             <ExchangesItems />
-        </div>
+        </section>
     );
 };
 
