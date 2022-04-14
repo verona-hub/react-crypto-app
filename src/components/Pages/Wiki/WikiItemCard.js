@@ -18,19 +18,20 @@ const WikiItemCard = ({ wikiItem }) => {
 
     return (
         <Card className="WikiItemCard">
-            <Card.Content>
+            <Card.Content className='wikiHeader'>
                 <Card.Header> { name } </Card.Header>
             </Card.Content>
-            { content && (
-                <Card.Content>
-                    <Card.Header> Info </Card.Header>
-                    <Card.Description> { content } </Card.Description>
-                </Card.Content>
-            )}
+            {
+                content && (
+                    <Card.Content>
+                        <Card.Header> Info </Card.Header>
+                        <Card.Description> { content } </Card.Description>
+                    </Card.Content> )
+            }
             <Card.Content>
                 <Card.Header> Market </Card.Header>
                 <Card.Description> Market Cap: &#36;{ marketCapFormatted } </Card.Description>
-                <Card.Description> Volume 24h: &#36;{ volumeFormatted } </Card.Description>
+                <Card.Description> Volume &#40;24h&#41;: &#36;{ volumeFormatted } </Card.Description>
             </Card.Content>
             <Card.Content>
                 <Card.Header> Top 3 Coins: </Card.Header>

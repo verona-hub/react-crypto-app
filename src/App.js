@@ -37,21 +37,20 @@ const App = () => {
                 search, setSearch,
                 activeNav, setActiveNav
             }}>
-
                 <div className='App'>
                     <Navbar />
                     <Routes>
                         <Route
                             exact path='/'
-                            element={ <Homepage/> }
+                            element={ <Homepage /> }
                         />
                         <Route
                             path='coins'
-                            element={ <Coins/> }
+                            element={ <Coins /> }
                         />
                         <Route
                             path='exchanges'
-                            element={ <Exchanges/> }
+                            element={ <Exchanges /> }
                         />
                         <Route
                             path='wiki'
@@ -59,7 +58,6 @@ const App = () => {
                         />
                     </Routes>
                 </div>
-
             </MyStateManagement.Provider>
         </BrowserRouter>
     );

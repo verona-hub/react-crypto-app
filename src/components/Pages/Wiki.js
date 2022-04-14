@@ -28,7 +28,6 @@ const Wiki = () => {
         const fetchData = async () => {
             const response = await axios(config);
             setWikiData(response.data);
-            console.log(response.data[0])
         };
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
         fetchData().then();
