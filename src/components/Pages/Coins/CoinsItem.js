@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const CoinItem = () => {
+const CoinsItem = () => {
     return (
         <div>
             <h2> Coin Item </h2>
@@ -10,4 +10,4 @@ const CoinItem = () => {
 };
 
 
-export default CoinItem;
+export default CoinsItem;

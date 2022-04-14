@@ -10,14 +10,18 @@ import Coins from "./components/Pages/Coins";
 import Exchanges from "./components/Pages/Exchanges";
 import Homepage from './components/Pages/Homepage';
 import Navbar from "./components/Navbar/Navbar";
+import Wiki from './components/Pages/Wiki';
 
 
 const App = () => {
 
-    // Initial State Management
+    /// Initial State Management
+    // Components Data
     const [marketData, setMarketData] = useState([]);
-    const [exchangeData, setExchangeData] = useState([]);
     const [coinsData, setCoinsData] = useState([]);
+    const [exchangeData, setExchangeData] = useState([]);
+    const [wikiData, setWikiData] = useState([]);
+    // Other states
     const [coin, setCoin] = useState('');
     const [search, setSearch] = useState('');
     const [activeNav, setActiveNav] = useState('home');
@@ -26,8 +30,9 @@ const App = () => {
         <BrowserRouter>
             <MyStateManagement.Provider value={{
                 marketData, setMarketData,
-                exchangeData, setExchangeData,
                 coinsData, setCoinsData,
+                exchangeData, setExchangeData,
+                wikiData, setWikiData,
                 coin, setCoin,
                 search, setSearch,
                 activeNav, setActiveNav
@@ -47,6 +52,10 @@ const App = () => {
                         <Route
                             path='exchanges'
                             element={ <Exchanges/> }
+                        />
+                        <Route
+                            path='wiki'
+                            element={ <Wiki /> }
                         />
                     </Routes>
                 </div>

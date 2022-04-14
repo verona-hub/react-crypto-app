@@ -4,19 +4,20 @@ import axios from "axios";
 // Context
 import { MyStateManagement } from '../Context/MyStateManagement';
 // Components
-import CoinsItems from "./Coins/CoinsItems";
+import WikiItems from './Wiki/WikiItems';
 
 
-const Coins = () => {
+const Wiki = () => {
 
-    // Import state from Context
-    const { setCoinsData } = useContext(MyStateManagement);
+    const { setWikiData } = useContext(MyStateManagement);
 
     // Api request params: get market data from CoinGecko
     const config = {
         method: 'GET',
-        url: 'https://api.coingecko.com/api/v3/coins/list',
-        params: {},
+        url: 'https://api.coingecko.com/api/v3/coins/categories',
+        params: {
+            order: 'market_cap_desc'
+        },
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -26,19 +27,20 @@ const Coins = () => {
     useEffect( () => {
         const fetchData = async () => {
             const response = await axios(config);
-            setCoinsData(response.data);
-        }
+            setWikiData(response.data);
+            console.log(response.data[0])
+        };
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
         fetchData().then();
     }, []);
 
-
     return (
-        <div>
-            <h1> This is Coins component </h1>
-            <CoinsItems />
-        </div>
+        <section className="Wiki">
+            <h2> This is Wiki component </h2>
+            <WikiItems />
+        </section>
     );
 };
 
-export default Coins;
+
+export default Wiki;

@@ -43,6 +43,13 @@ const Navbar = () => {
                         active={ activeNav === 'exchanges' }
                         onClick={ handleClick }
                     />
+                    <Menu.Item
+                        name='Wiki'
+                        as={ Link }
+                        to='/wiki'
+                        active={ activeNav === 'wiki' }
+                        onClick={ handleClick }
+                    />
                 </Menu>
             </Segment>
         </nav>
