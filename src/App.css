@@ -138,7 +138,7 @@ Table
 }
 
 /*
-Exchanges
+Exchanges + Wiki
 */
 
 .ui.grid {
@@ -146,19 +146,22 @@ Exchanges
     justify-content: space-between;
 }
 
-.ui.card {
+.ui.card .content {
+    padding: 50px 25px !important;
+    text-align: center;
+}
+
+/*
+Exchanges
+*/
+
+.ui.card.ExchangesItemCard {
     margin: 60px 0 !important;
 }
 
-.ui.card .content {
-    padding: 50px 25px !important;
-}
-
-.ui.card .content.wikiHeader {
-    background: rgba(0,0,0,.05);
-    flex-grow: 0;
-    margin: 0;
-    text-align: center;
+.ExchangesItemCard .exchange-details {
+    padding: 10px !important;
+    text-align: left;
 }
 
 .ExchangesItems {
@@ -171,14 +174,66 @@ Exchanges
     width: 74px !important;
 }
 
+/*
+Wiki
+*/
+
+.WikiItems .ui.grid {
+    justify-content: space-evenly !important;
+}
+
+.ui.card.WikiItemCard {
+    margin: 60px 40px !important;
+    width: 360px;
+}
+
+.ui.card.WikiItemCard .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ui.card.WikiItemCard .content.wikiHeader {
+    background: rgba(0,0,0,.05);
+    flex-grow: 0 !important;
+}
+
+.WikiItemCard .header:not(.wikiHeader .header) {
+    margin: 20px 0;
+}
+
+.WikiItemCard .content.top-3-coins {
+    flex-grow: 0 !important;
+}
+
+.WikiItemCard .top-coins-images img {
+    margin: 20px;
+}
+
+/*
+Desktop
+*/
+
+@media only screen and (min-width: 1200px) {
+    .WikiItems div.ui.grid.container {
+        width: 80vw !important;
+    }
+
+    .WikiItems .ui.card {
+        margin: 0 50px;
+    }
+}
+
 
 
 /*
 Mobile
 */
 
-@media (max-width: 780px) {
-    .ui.card {
-        margin: 2em auto !important;
+@media (max-width: 1000px) {
+    .ui.card.WikiItemCard {
+        margin: 50px 10px !important;
+        width: 85vw;
     }
 }
+

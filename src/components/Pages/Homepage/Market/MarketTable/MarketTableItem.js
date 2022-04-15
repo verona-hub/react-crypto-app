@@ -2,19 +2,24 @@ import React from 'react';
 
 // Semantic-UI
 import { Table } from "semantic-ui-react";
+// Formatting function
+import { formatNumberToLocale, formatDollarPrice } from '../../../../utilities/Functions';
 
 
 const MarketTableItem = ({ item }) => {
 
-    const {
-        market_cap_rank,
-        image, name,
-        symbol, current_price,
-        market_cap, price_change_percentage_24h,
-        circulating_supply
+    let {
+        market_cap_rank, image, name,
+        symbol, current_price, market_cap,
+        price_change_percentage_24h, circulating_supply
     } = item;
 
-    // Check if 24hr price change is positive or negative and add the according className
+    // Format the numbers
+    current_price = formatDollarPrice(current_price);
+    market_cap = formatNumberToLocale(market_cap);
+    circulating_supply = formatNumberToLocale(circulating_supply);
+
+    // Check if 24hr price change is positive or negative and add the according className and color
     const numClass = Math.sign(price_change_percentage_24h) === -1 ? `negative-number` : `positive-number`;
 
     return (
