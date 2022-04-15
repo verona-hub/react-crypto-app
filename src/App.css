@@ -8,11 +8,22 @@
 }
 
 * {
+    animation-name: fadeIn;
+    animation-duration: 700ms;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 body {
@@ -55,6 +66,44 @@ nav img {
 .segment {
     border-radius: 0 !important;
 }
+
+/*
+Scroll To Top
+*/
+
+.ScrollToTop {
+    animation-name: fadeScroll, fadeOutScroll;
+    animation-duration: 2000ms, 2000ms;
+    cursor: pointer;
+}
+
+.ScrollToTop img {
+    bottom: 20px;
+    position: fixed;
+    right: 20px;
+    transform: rotate(180deg);
+    width: 64px;
+}
+
+
+@keyframes fadeScroll {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutScroll {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 
 /*
 Homepage
@@ -124,6 +173,10 @@ Table
     text-align: center !important;
 }
 
+.MarketTableBody * {
+    font-weight: 700;
+}
+
 .Market td.name {
     display: flex;
     align-items: center !important;
@@ -184,7 +237,7 @@ Wiki
 
 .ui.card.WikiItemCard {
     margin: 60px 40px !important;
-    width: 360px;
+    width: 420px;
 }
 
 .ui.card.WikiItemCard .content {
@@ -225,12 +278,11 @@ Desktop
 }
 
 
-
 /*
 Mobile
 */
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .ui.card.WikiItemCard {
         margin: 50px 10px !important;
         width: 85vw;

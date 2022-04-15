@@ -10,6 +10,7 @@ import Coins from "./components/Pages/Coins";
 import Exchanges from "./components/Pages/Exchanges";
 import Homepage from './components/Pages/Homepage';
 import Navbar from "./components/Navbar/Navbar";
+import ScrollToTop from "./components/utilities/ScrollToTop";
 import Wiki from './components/Pages/Wiki';
 
 
@@ -25,6 +26,7 @@ const App = () => {
     const [coin, setCoin] = useState('');
     const [search, setSearch] = useState('');
     const [activeNav, setActiveNav] = useState('home');
+    const [showScrollButton, setShowScrollButton] = useState(false);
 
     return (
         <BrowserRouter>
@@ -35,10 +37,13 @@ const App = () => {
                 wikiData, setWikiData,
                 coin, setCoin,
                 search, setSearch,
-                activeNav, setActiveNav
+                activeNav, setActiveNav,
+                showScrollButton, setShowScrollButton
             }}>
                 <div className='App'>
+
                     <Navbar />
+
                     <Routes>
                         <Route
                             exact path='/'
@@ -57,6 +62,9 @@ const App = () => {
                             element={ <Wiki /> }
                         />
                     </Routes>
+
+                    <ScrollToTop />
+
                 </div>
             </MyStateManagement.Provider>
         </BrowserRouter>

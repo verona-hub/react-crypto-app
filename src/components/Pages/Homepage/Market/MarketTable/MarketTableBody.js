@@ -13,7 +13,7 @@ const MarketTableBody = () => {
     const { marketData } = useContext(MyStateManagement);
 
     return (
-        <Table.Body>
+        <Table.Body className='MarketTableBody'>
             {
                 marketData.map(item => (
                     <MarketTableItem
