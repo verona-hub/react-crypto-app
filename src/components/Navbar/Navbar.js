@@ -8,7 +8,6 @@ import { MyStateManagement } from '../Context/MyStateManagement';
 import { Menu, Segment } from 'semantic-ui-react';
 
 
-
 const Navbar = () => {
 
     // Import State from Context
@@ -19,7 +18,7 @@ const Navbar = () => {
         setActiveNav(name);
     };
 
-    // Load the navigation state from the local storage
+    // If present, load the navigation state from the local storage
     useEffect( () => {
         const data = localStorage.getItem('activeNav');
         data && setActiveNav(JSON.parse(data));

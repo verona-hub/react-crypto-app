@@ -10,6 +10,8 @@ const ScrollToTop = () => {
     // Import State from Context
     const { showScrollButton, setShowScrollButton } = useContext(MyStateManagement);
 
+    // Add an event listener to detect the scroll
+    // If scrolled to a certain point, the scroll to top button will appear/disappear
     useEffect( () => {
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > window.innerHeight * 0.1) {
@@ -18,9 +20,10 @@ const ScrollToTop = () => {
                 setShowScrollButton(false);
             }
         });
-    }, []);
+    }, [setShowScrollButton]);
 
-    const onScroll = () => {
+    // If the scroll arrow is clicked, the window will scroll to the top
+    const onClick = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -28,7 +31,7 @@ const ScrollToTop = () => {
     };
 
     return(
-        <div className="ScrollToTop" onClick={ onScroll }>
+        <div className="ScrollToTop" onClick={ onClick }>
             {
                 showScrollButton && (
                     <img src={ scrollToTopIcon } alt='scroll to top icon'/>

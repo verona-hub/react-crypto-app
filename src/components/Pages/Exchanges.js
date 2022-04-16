@@ -26,15 +26,25 @@ const Exchanges = () => {
         }
     };
 
+    // Fetch the Api data
     useEffect( () => {
-        async function fetchData() {
+        const fetchData = async () => {
             const response = await axios(config);
+
+            // Save the data to exchangeData state
             setExchangeData(response.data);
+            // Save the data to the local storage
+            localStorage.setItem('exchangeData', JSON.stringify(response.data));
         }
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
         fetchData().then();
     }, []);
 
+    // If present, load the exchangeData from the local storage
+    useEffect( () => {
+        const data = localStorage.getItem('exchangeData');
+        data && setExchangeData(JSON.parse(data));
+    }, [setExchangeData]);
 
     return (
         <section className="Exchanges">
