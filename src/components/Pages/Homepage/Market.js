@@ -9,7 +9,6 @@ import { Container } from 'semantic-ui-react'
 import MarketTable from "./Market/MarketTable";
 
 
-
 const Market = () => {
 
     // Import state from Context

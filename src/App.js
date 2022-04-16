@@ -8,6 +8,7 @@ import { MyStateManagement } from './components/Context/MyStateManagement';
 // Components
 import Coins from "./components/Pages/Coins";
 import Exchanges from "./components/Pages/Exchanges";
+import Footer from './components/Footer/Footer';
 import Homepage from './components/Pages/Homepage';
 import Navbar from "./components/Navbar/Navbar";
 import ScrollToTop from "./components/utilities/ScrollToTop";
@@ -65,6 +66,8 @@ const App = () => {
                     </Routes>
 
                     <ScrollToTop />
+
+                    <Footer />
 
                 </div>
             </MyStateManagement.Provider>

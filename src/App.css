@@ -68,6 +68,38 @@ nav img {
 }
 
 /*
+Footer
+*/
+
+footer {
+    height: 200px;
+    margin-top: 150px;
+}
+
+.Footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Footer .left,
+.Footer .right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.Footer .left {
+    background-color: lightpink;
+    border-right: 1px solid;
+}
+
+.Footer .right {
+    background-color: lightblue;
+}
+
+/*
 Scroll To Top
 */
 
@@ -84,7 +116,6 @@ Scroll To Top
     width: 64px;
 }
 
-
 @keyframes fadeScroll {
 
 
@@ -95,16 +126,6 @@ Scroll To Top
         opacity: 1;
     }
 }
-
-@keyframes fadeOutScroll {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
 
 /*
 Homepage
