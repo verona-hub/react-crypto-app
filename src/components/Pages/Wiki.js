@@ -9,6 +9,7 @@ import WikiItems from './Wiki/WikiItems';
 
 const Wiki = () => {
 
+    // Import State from Context
     const { setWikiData } = useContext(MyStateManagement);
 
     // Api request params: get market data from CoinGecko
@@ -27,11 +28,21 @@ const Wiki = () => {
     useEffect( () => {
         const fetchData = async () => {
             const response = await axios(config);
+
+            // Save the data to wikiData state
             setWikiData(response.data);
+            // Save the data to the local storage
+            localStorage.setItem('wikiData', JSON.stringify(response.data));
         };
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
         fetchData().then();
     }, []);
+
+    // If present, load the wikiData from the local storage
+    useEffect( () => {
+        const data = localStorage.getItem('wikiData');
+        data && setWikiData(JSON.parse(data));
+    }, [setWikiData]);
 
     return (
         <section className="Wiki">
