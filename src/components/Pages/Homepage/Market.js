@@ -31,14 +31,25 @@ const Market = () => {
         }
     };
 
+    // Fetch the Api data
     useEffect(() => {
-        async function fetchData() {
+        const fetchData = async () => {
             const response = await axios(config);
+
+            // Save the data to marketData state
             setMarketData(response.data);
+            // Save the data to the local storage
+            localStorage.setItem('marketData', JSON.stringify(response.data));
         }
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
         fetchData().then();
     }, []);
+
+    // If present, load the marketData from the local storage
+    useEffect( () => {
+        const data = localStorage.getItem('marketData');
+        data && setMarketData(JSON.parse(data));
+    }, [setMarketData]);
 
 
     return (

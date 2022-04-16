@@ -46,6 +46,7 @@ const Exchanges = () => {
         data && setExchangeData(JSON.parse(data));
     }, [setExchangeData]);
 
+
     return (
         <section className="Exchanges">
             <ExchangesItems />

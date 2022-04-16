@@ -28,6 +28,7 @@ const App = () => {
     const [activeNav, setActiveNav] = useState('home');
     const [showScrollButton, setShowScrollButton] = useState(false);
 
+
     return (
         <BrowserRouter>
             <MyStateManagement.Provider value={{
