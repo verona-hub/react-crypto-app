@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import logo from '../../img/favicon.ico';
 import { Link } from "react-router-dom";
 
@@ -11,11 +11,25 @@ import { Menu, Segment } from 'semantic-ui-react';
 
 const Navbar = () => {
 
+    // Import State from Context
     const { activeNav, setActiveNav } = useContext(MyStateManagement);
 
+    // Set the navigation state to be the item name
     const handleClick = (e, { name }) => {
         setActiveNav(name);
     };
+
+    // Load the navigation state from the local storage
+    useEffect( () => {
+        const data = localStorage.getItem('activeNav');
+        data && setActiveNav(JSON.parse(data));
+    }, [setActiveNav]);
+
+    // Save the navigation state to the local storage
+    useEffect( () => {
+        localStorage.setItem('activeNav', JSON.stringify(activeNav));
+    }, [activeNav]);
+
 
     return (
         <nav>
