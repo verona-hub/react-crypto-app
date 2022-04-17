@@ -11,6 +11,7 @@ import Exchanges from "./components/Pages/Exchanges";
 import Footer from './components/Footer/Footer';
 import Homepage from './components/Pages/Homepage';
 import Navbar from "./components/Navbar/Navbar";
+import Sidebar from "./components/Navbar/Sidebar";
 import ScrollToTop from "./components/utilities/ScrollToTop";
 import Wiki from './components/Pages/Wiki';
 
@@ -44,7 +45,8 @@ const App = () => {
             }}>
                 <div className='App'>
 
-                    <Navbar />
+                    {/*<Navbar />*/}
+                    <Sidebar />
 
                     <Routes>
                         <Route

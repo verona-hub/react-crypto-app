@@ -31,7 +31,7 @@ const Navbar = () => {
 
 
     return (
-        <nav>
+        <nav className='Navbar'>
             <Segment inverted>
                 <Menu inverted pointing secondary>
                     <img src={ logo } alt='app logo'/>

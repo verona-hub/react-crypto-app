@@ -3,6 +3,7 @@
     --blue: #093545;
     --cream: #eeedec;
     --green: #30b630;
+    --grey_dark: rgba(0,0,0,.87);
     --red: #e52929;
     --white: #fff;
 }
@@ -48,6 +49,13 @@ button,
     padding: 10px 30px;
 }
 
+.Homepage,
+.Coins,
+.Exchanges,
+.Wiki {
+    margin-left: 200px;
+}
+
 /*
 Navbar
 */
@@ -57,7 +65,7 @@ Navbar
     justify-content: center;
 }
 
-nav img {
+.Navbar img {
     position: relative;
     right: 15px;
     width: 40px;
@@ -65,6 +73,43 @@ nav img {
 
 .segment {
     border-radius: 0 !important;
+}
+
+/*
+Sidebar
+*/
+
+.Sidebar {
+    align-items: center;
+    background-color: var(--grey_dark);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
+    position: fixed;
+    width: 200px;
+}
+
+.ui.grid {
+    margin-top: 0 !important;
+}
+
+.Sidebar a {
+    font-size: 1.2rem;
+}
+
+.Sidebar img {
+    width: 40px;
+}
+
+.active {
+    color: green !important;
+    text-decoration: underline;
+}
+
+.inactive {
+    color: white !important;
 }
 
 /*
@@ -109,15 +154,14 @@ Scroll To Top
 }
 
 .ScrollToTop img {
-    bottom: 20px;
+    bottom: 220px;
     position: fixed;
-    right: 20px;
+    right: 10px;
     transform: rotate(180deg);
     width: 64px;
 }
 
 @keyframes fadeScroll {
-
 
     from {
         opacity: 0;
@@ -132,7 +176,7 @@ Homepage
 */
 
 .Homepage {
-    margin: 20px 10px;
+    /*margin: 20px 10px;*/
     text-align: center;
 }
 
@@ -240,7 +284,7 @@ Exchanges
 }
 
 .ExchangesItems {
-    margin: 80px;
+    /*margin: 80px;*/
 }
 
 .ExchangesItemCard img {
