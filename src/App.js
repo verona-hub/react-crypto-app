@@ -10,7 +10,6 @@ import Coins from "./components/Pages/Coins";
 import Exchanges from "./components/Pages/Exchanges";
 import Footer from './components/Footer/Footer';
 import Homepage from './components/Pages/Homepage';
-import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Navbar/Sidebar";
 import ScrollToTop from "./components/utilities/ScrollToTop";
 import Wiki from './components/Pages/Wiki';
@@ -45,32 +44,33 @@ const App = () => {
             }}>
                 <div className='App'>
 
-                    {/*<Navbar />*/}
                     <Sidebar />
 
-                    <Routes>
-                        <Route
-                            exact path='/'
-                            element={ <Homepage /> }
-                        />
-                        <Route
-                            path='coins'
-                            element={ <Coins /> }
-                        />
-                        <Route
-                            path='exchanges'
-                            element={ <Exchanges /> }
-                        />
-                        <Route
-                            path='wiki'
-                            element={ <Wiki /> }
-                        />
-                    </Routes>
+                    <div className='app-content'>
+                        <Routes>
+                            <Route
+                                exact path='/'
+                                element={ <Homepage/> }
+                            />
+                            <Route
+                                path='coins'
+                                element={ <Coins/> }
+                            />
+                            <Route
+                                path='exchanges'
+                                element={ <Exchanges/> }
+                            />
+                            <Route
+                                path='wiki'
+                                element={ <Wiki/> }
+                            />
+                        </Routes>
 
-                    <ScrollToTop />
+                        <ScrollToTop />
 
-                    <Footer />
+                        <Footer />
 
+                    </div>
                 </div>
             </MyStateManagement.Provider>
         </BrowserRouter>

@@ -14,7 +14,7 @@ const ExchangesItems = () => {
     const { exchangeData } = useContext(MyStateManagement);
 
     return (
-        <div className="ExchangesItems">
+        <main className="ExchangesItems">
             <Grid container>
                 {
                     exchangeData.map(exchangeDataItem => (
@@ -25,7 +25,7 @@ const ExchangesItems = () => {
                     ))
                 }
             </Grid>
-        </div>
+        </main>
     );
 };
 

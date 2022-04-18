@@ -13,42 +13,50 @@ const Sidebar = () => {
 
     return (
         <nav className="Sidebar">
-            <img src={ logo } alt='app logo'/>
-            <NavLink
-                to='/'
-                className={ ({ isActive }) => (
-                    isActive ? 'active' : 'inactive'
-                )}
-            >
-                Homepage
-            </NavLink>
 
-            <NavLink
-                to='coins'
-                className={ ({ isActive }) => (
-                    isActive ? 'active' : 'inactive'
-                )}
-            >
-                Coins
-            </NavLink>
+            <div className="logo">
+                <img src={ logo } alt='app logo'/>
+            </div>
 
-            <NavLink
-                to='exchanges'
-                className={ ({ isActive }) => (
-                    isActive ? 'active' : 'inactive'
-                )}
-            >
-                Exchanges
-            </NavLink>
+            <div className="links-wrapper">
+                <div className="links">
+                    <NavLink
+                        to='/'
+                        className={ ({ isActive }) => (
+                            isActive ? 'active' : 'inactive'
+                        ) }
+                    >
+                        Homepage
+                    </NavLink>
 
-            <NavLink
-                to='wiki'
-                className={ ({ isActive }) => (
-                    isActive ? 'active' : 'inactive'
-                )}
-            >
-                Wiki
-            </NavLink>
+                    <NavLink
+                        to='coins'
+                        className={ ({ isActive }) => (
+                            isActive ? 'active' : 'inactive'
+                        ) }
+                    >
+                        Coins
+                    </NavLink>
+
+                    <NavLink
+                        to='exchanges'
+                        className={ ({ isActive }) => (
+                            isActive ? 'active' : 'inactive'
+                        ) }
+                    >
+                        Exchanges
+                    </NavLink>
+
+                    <NavLink
+                        to='wiki'
+                        className={ ({ isActive }) => (
+                            isActive ? 'active' : 'inactive'
+                        ) }
+                    >
+                        Wiki
+                    </NavLink>
+                </div>
+            </div>
         </nav>
     );
 };

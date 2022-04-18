@@ -14,7 +14,7 @@ const WikiItems = () => {
     const { wikiData } = useContext(MyStateManagement);
 
     return (
-        <div className="WikiItems">
+        <main className="WikiItems">
             <Grid container>
                 {
                     wikiData.map(wikiItem => (
@@ -25,7 +25,7 @@ const WikiItems = () => {
                     ))
                 }
             </Grid>
-        </div>
+        </main>
     );
 };
 

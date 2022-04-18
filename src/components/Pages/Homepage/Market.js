@@ -52,10 +52,12 @@ const Market = () => {
 
 
     return (
-        <Container className='Market'>
-            <h2> Today's Cryptocurrency Prices by Market Cap </h2>
-            <MarketTable />
-        </Container>
+        <main>
+            <Container className='Market'>
+                <h2> Today's Cryptocurrency Prices by Market Cap </h2>
+                <MarketTable/>
+            </Container>
+        </main>
     );
 };
 

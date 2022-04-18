@@ -3,6 +3,7 @@
     --blue: #093545;
     --cream: #eeedec;
     --green: #30b630;
+    --grey: #9c9b9b;
     --grey_dark: rgba(0,0,0,.87);
     --red: #e52929;
     --white: #fff;
@@ -49,67 +50,67 @@ button,
     padding: 10px 30px;
 }
 
-.Homepage,
-.Coins,
-.Exchanges,
-.Wiki {
-    margin-left: 200px;
+.Sidebar {
+    width: 200px;
+}
+
+.app-content {
+    margin-left: 205px;
 }
 
 /*
 Navbar
 */
 
-.ui.menu {
-    align-items: center;
-    justify-content: center;
-}
-
-.Navbar img {
-    position: relative;
-    right: 15px;
-    width: 40px;
-}
-
-.segment {
-    border-radius: 0 !important;
-}
-
-/*
-Sidebar
-*/
-
-.Sidebar {
-    align-items: center;
-    background-color: var(--grey_dark);
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 300px;
-    position: fixed;
-    width: 200px;
-}
-
+/* Leave this Semantic-UI setting */
 .ui.grid {
     margin-top: 0 !important;
 }
 
-.Sidebar a {
-    font-size: 1.2rem;
+.Sidebar {
+    align-items: center;
+    background-color: var(--grey_dark);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: fixed;
 }
 
-.Sidebar img {
-    width: 40px;
+.Sidebar .logo img {
+    margin: 30px 0;
+    width: 60px;
 }
 
-.active {
-    color: green !important;
-    text-decoration: underline;
+.Sidebar .links-wrapper {
+    width: 50%;
 }
 
-.inactive {
-    color: white !important;
+.Sidebar .links {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sidebar .links a {
+    padding: 5px 10px;
+}
+
+.Sidebar .links a.active::before {
+    content: "\2022";
+    margin-right: 0.4rem;
+}
+
+.Sidebar a.active {
+    color: var(--white) !important;
+    font-size: 1.3rem;
+}
+
+.Sidebar a.inactive {
+    color: var(--grey) !important;
+    font-size: 1.1rem;
+}
+
+.Sidebar a.inactive:hover {
+    color: var(--white) !important;
 }
 
 /*
@@ -132,7 +133,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 100%;
 }
 
 .Footer .left {
