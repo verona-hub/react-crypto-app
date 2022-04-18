@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from 'react';
 import axios from "axios";
 
 // Context
-import { MyStateManagement } from '../Context/MyStateManagement';
+import { MyStateManagement } from '../../Context/MyStateManagement';
 // Components
-import CoinsItems from "./Coins/CoinsItems";
+import CoinsItems from "./CoinsItems";
 
 
 const Coins = () => {

@@ -54,7 +54,7 @@ button,
     width: 200px;
 }
 
-.app-content {
+.Main {
     margin-left: 205px;
 }
 
@@ -82,7 +82,7 @@ Navbar
 }
 
 .Sidebar .links-wrapper {
-    width: 50%;
+    width: 75%;
 }
 
 .Sidebar .links {
@@ -90,13 +90,18 @@ Navbar
     flex-direction: column;
 }
 
-.Sidebar .links a {
+.Sidebar a {
     padding: 5px 10px;
 }
 
-.Sidebar .links a.active::before {
-    content: "\2022";
+.Sidebar a.active::before {
+    content: "\00ab";
     margin-right: 0.4rem;
+}
+
+.Sidebar a.active::after {
+    content: "\00bb";
+    margin-left: 0.4rem;
 }
 
 .Sidebar a.active {
@@ -107,6 +112,7 @@ Navbar
 .Sidebar a.inactive {
     color: var(--grey) !important;
     font-size: 1.1rem;
+    margin-left: 1.1rem;
 }
 
 .Sidebar a.inactive:hover {

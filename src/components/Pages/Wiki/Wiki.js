@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from 'react';
 import axios from "axios";
 
 // Context
-import { MyStateManagement } from '../Context/MyStateManagement';
+import { MyStateManagement } from '../../Context/MyStateManagement';
 // Components
-import WikiItems from './Wiki/WikiItems';
+import WikiItems from './WikiItems';
 
 
 const Wiki = () => {

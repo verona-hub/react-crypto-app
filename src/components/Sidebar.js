@@ -1,15 +1,10 @@
-import React, { useContext } from 'react';
-import logo from '../../img/favicon.ico';
+import React  from 'react';
+import logo from '../img/favicon.ico';
 import { NavLink } from 'react-router-dom';
 
-// Context
-import { MyStateManagement } from '../Context/MyStateManagement';
 
 
 const Sidebar = () => {
-
-    // Import State from Context
-    const { activeNav, setActiveNav } = useContext(MyStateManagement);
 
     return (
         <nav className="Sidebar">
@@ -24,7 +19,7 @@ const Sidebar = () => {
                         to='/'
                         className={ ({ isActive }) => (
                             isActive ? 'active' : 'inactive'
-                        ) }
+                        )}
                     >
                         Homepage
                     </NavLink>
@@ -33,7 +28,7 @@ const Sidebar = () => {
                         to='coins'
                         className={ ({ isActive }) => (
                             isActive ? 'active' : 'inactive'
-                        ) }
+                        )}
                     >
                         Coins
                     </NavLink>
@@ -42,7 +37,7 @@ const Sidebar = () => {
                         to='exchanges'
                         className={ ({ isActive }) => (
                             isActive ? 'active' : 'inactive'
-                        ) }
+                        )}
                     >
                         Exchanges
                     </NavLink>
@@ -51,7 +46,7 @@ const Sidebar = () => {
                         to='wiki'
                         className={ ({ isActive }) => (
                             isActive ? 'active' : 'inactive'
-                        ) }
+                        )}
                     >
                         Wiki
                     </NavLink>
