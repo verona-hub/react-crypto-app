@@ -4,6 +4,8 @@
     --cream: #eeedec;
     --green: #30b630;
     --grey: #9c9b9b;
+    --grey_2: #383841;
+    --grey_2_light: #4b4b54;
     --grey_dark: rgba(0,0,0,.87);
     --red: #e52929;
     --white: #fff;
@@ -80,7 +82,7 @@ Navbar
 
 .Sidebar .logo img {
     margin: 30px 0;
-    width: 60px;
+    width: 70px;
 }
 
 .Sidebar .links-wrapper {
@@ -93,13 +95,20 @@ Navbar
 }
 
 .Sidebar .links img {
-    width: 32px;
+    margin: 5px;
+    padding-right: 5px;
+    width: 36px;
 }
 
 .Sidebar a {
-    /*background-color: lightpink;*/
+    background-color: var(--grey_2);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7px 0;
     padding: 5px 10px;
-    transition: transform 350ms linear, margin-right 500ms linear;
+    transition: all 350ms linear;
 }
 
 .Sidebar a.active {
@@ -108,20 +117,14 @@ Navbar
     transform: scale(1.1);
 }
 
-.Sidebar a.active::before {
-    /*content: "\00ab";*/
-    content: '';
-    margin-right: 0.7rem;
-}
-
 .Sidebar a.inactive {
     color: var(--grey) !important;
     font-size: 1.1rem;
-    margin-left: 1rem;
     transform: scale(1);
 }
 
 .Sidebar a.inactive:hover {
+    background-color: var(--grey_2_light);
     color: var(--white) !important;
 }
 

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../img/favicon.ico';
 // Navigation Icons
 import coin from '../img/coin.png';
+import coin_inactive from '../img/coin-inactive.png';
 import home from '../img/home.png';
 import exchange from '../img/exchange.png';
 import wiki from '../img/wiki.png';
