@@ -56,6 +56,7 @@ button,
 
 .Main {
     margin-left: 205px;
+    position: relative;
 }
 
 /*
@@ -70,10 +71,11 @@ Navbar
 .Sidebar {
     align-items: center;
     background-color: var(--grey_dark);
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
     position: fixed;
+    top: 0;
 }
 
 .Sidebar .logo img {
@@ -98,7 +100,7 @@ Navbar
 .Sidebar a.active {
     color: var(--white) !important;
     font-size: 1.3rem;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .Sidebar a.active::before {
