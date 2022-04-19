@@ -92,7 +92,7 @@ Navbar
 
 .Sidebar a {
     padding: 5px 10px;
-    transition: transform 350ms linear, margin-right 0.2s, margin-left 500ms;
+    transition: transform 350ms linear, margin-right 500ms linear;
 }
 
 .Sidebar a.active {
@@ -103,7 +103,7 @@ Navbar
 
 .Sidebar a.active::before {
     content: "\00ab";
-    margin-right: 0.4rem;
+    margin-right: 0.2rem;
 }
 
 .Sidebar a.inactive {
