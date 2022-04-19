@@ -1,4 +1,4 @@
-import React  from 'react';
+import React, { useEffect }  from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../img/favicon.ico';
 // Navigation Icons
@@ -10,6 +10,10 @@ import wiki from '../img/wiki.png';
 
 
 const Sidebar = () => {
+
+    let isActive = window.location.pathname;
+    console.log(window.location.href)
+
 
     return (
         <nav className="Sidebar">
@@ -36,7 +40,7 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
-                        <img src={ coin } alt='menu coin icon'/>
+                        <img src={isActive ? coin : coin_inactive } alt='menu coin icon'/>
                         Coins
                     </NavLink>
 
