@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Components
-import Market from "./Market";
-import Search from "./Search";
+import Market from "./Homepage/Market";
+import Search from "./Homepage/Search";
 
 
 const Homepage = () => {

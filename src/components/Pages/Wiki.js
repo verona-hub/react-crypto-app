@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from 'react';
 import axios from "axios";
 
 // Context
-import { MyStateManagement } from '../../Context/MyStateManagement';
+import { MyStateManagement } from '../Context/MyStateManagement';
 // Components
-import WikiItems from './WikiItems';
+import WikiItems from './Wiki/WikiItems';
 
 
 const Wiki = () => {
@@ -35,7 +35,7 @@ const Wiki = () => {
             localStorage.setItem('wikiData', JSON.stringify(response.data));
         };
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
-        fetchData().then();
+        // fetchData().then();
     }, []);
 
     // If present, load the wikiData from the local storage

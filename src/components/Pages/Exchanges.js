@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from 'react';
 import axios from "axios";
 
 // Context
-import { MyStateManagement } from '../../Context/MyStateManagement';
+import { MyStateManagement } from '../Context/MyStateManagement';
 // Components
-import ExchangesItems from "./ExchangesItems";
+import ExchangesItems from "./Exchanges/ExchangesItems";
 
 
 const Exchanges = () => {
@@ -37,7 +37,7 @@ const Exchanges = () => {
             localStorage.setItem('exchangeData', JSON.stringify(response.data));
         }
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
-        fetchData().then();
+        // fetchData().then();
     }, []);
 
     // If present, load the exchangeData from the local storage

@@ -2,10 +2,10 @@ import React from 'react';
 // Routes
 import { Route, Routes } from "react-router-dom";
 // Components
-import Coins from "./Pages/Coins/Coins";
-import Exchanges from "./Pages/Exchanges/Exchanges";
-import Homepage from "./Pages/Homepage/Homepage";
-import Wiki from "./Pages/Wiki/Wiki";
+import Coins from "./Pages/Coins";
+import Exchanges from "./Pages/Exchanges";
+import Homepage from "./Pages/Homepage";
+import Wiki from "./Pages/Wiki";
 
 
 const Routing = () => {

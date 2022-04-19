@@ -1,6 +1,11 @@
 import React  from 'react';
-import logo from '../img/favicon.ico';
 import { NavLink } from 'react-router-dom';
+import logo from '../img/favicon.ico';
+// Navigation Icons
+import coin from '../img/coin.png';
+import home from '../img/home.png';
+import exchange from '../img/exchange.png';
+import wiki from '../img/wiki.png';
 
 
 const Sidebar = () => {
@@ -20,6 +25,7 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
+                        <img src={ home } alt='menu home icon'/>
                         Homepage
                     </NavLink>
 
@@ -29,6 +35,7 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
+                        <img src={ coin } alt='menu coin icon'/>
                         Coins
                     </NavLink>
 
@@ -38,6 +45,7 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
+                        <img src={ exchange } alt='menu exchanges icon'/>
                         Exchanges
                     </NavLink>
 
@@ -47,6 +55,7 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
+                        <img src={ wiki } alt='menu wiki icon'/>
                         Wiki
                     </NavLink>
                 </div>
