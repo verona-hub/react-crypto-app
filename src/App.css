@@ -92,6 +92,13 @@ Navbar
 
 .Sidebar a {
     padding: 5px 10px;
+    transition: transform 350ms linear, margin-right 0.2s, margin-left 500ms;
+}
+
+.Sidebar a.active {
+    color: var(--white) !important;
+    font-size: 1.3rem;
+    transform: scale(1.2);
 }
 
 .Sidebar a.active::before {
@@ -99,20 +106,11 @@ Navbar
     margin-right: 0.4rem;
 }
 
-.Sidebar a.active::after {
-    content: "\00bb";
-    margin-left: 0.4rem;
-}
-
-.Sidebar a.active {
-    color: var(--white) !important;
-    font-size: 1.3rem;
-}
-
 .Sidebar a.inactive {
     color: var(--grey) !important;
     font-size: 1.1rem;
-    margin-left: 1.1rem;
+    margin-left: 1rem;
+    transform: scale(1);
 }
 
 .Sidebar a.inactive:hover {
