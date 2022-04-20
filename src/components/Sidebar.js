@@ -1,5 +1,5 @@
 import React, { useEffect }  from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../img/favicon.ico';
 // Navigation Icons
 import coin from '../img/coin.png';
@@ -11,9 +11,10 @@ import wiki from '../img/wiki.png';
 
 const Sidebar = () => {
 
-    let isActive = window.location.pathname;
-    console.log(window.location.href)
-
+    let location = useLocation();
+    useEffect(() => {
+        console.log(location.pathname);
+    }, [location.pathname]);
 
     return (
         <nav className="Sidebar">
@@ -40,7 +41,21 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
-                        <img src={isActive ? coin : coin_inactive } alt='menu coin icon'/>
+                        {
+                            <img
+                                src={ location.pathname === '/coins' ? coin : coin_inactive }
+                                alt='menu icon'
+                            />
+
+
+                        }
+
+                        {/*<img src={ (window.location.pathname === '/coins')*/}
+                        {/*    ? coin*/}
+                        {/*    : coin_inactive}*/}
+                        {/*     alt='menu coin icon'*/}
+                        {/*/>*/}
+                        {/*<img src={ isActive ? coin : coin_inactive } alt='menu coin icon'/>*/}
                         Coins
                     </NavLink>
 
