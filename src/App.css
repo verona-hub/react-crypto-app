@@ -101,31 +101,36 @@ Navbar
 }
 
 .Sidebar a {
-    background-color: var(--grey_2);
+    /*background-color: var(--grey_2);*/
+    background-color: var(--cream);
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 7px 0;
+    margin: 7px;
     padding: 5px 10px;
     transition: all 350ms linear;
 }
 
 .Sidebar a.active {
-    color: var(--white) !important;
-    font-size: 1.3rem;
-    transform: scale(1.1);
+    background-color: var(--grey_2);
+    color: var(--cream) !important;
+    /*font-size: 1.3rem;*/
+    transform: scale(1.2);
 }
 
 .Sidebar a.inactive {
-    color: var(--grey) !important;
-    font-size: 1.1rem;
+    /*color: var(--grey) !important;*/
+    opacity: 0.8;
+    color: var(--grey_2);
+    /*font-size: 1.1rem;*/
     transform: scale(1);
 }
 
 .Sidebar a.inactive:hover {
-    background-color: var(--grey_2_light);
-    color: var(--white) !important;
+    /*background-color: var(--grey);*/
+    opacity: 1;
+    /*color: var(--white) !important;*/
 }
 
 /*

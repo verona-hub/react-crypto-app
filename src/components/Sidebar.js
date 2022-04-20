@@ -2,19 +2,29 @@ import React, { useEffect }  from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../img/favicon.ico';
 // Navigation Icons
-import coin from '../img/coin.png';
-import coin_inactive from '../img/coin-inactive.png';
 import home from '../img/home.png';
+import home_inactive from '../img/home_inactive.png';
+import coin from '../img/coin.png';
+import coin_inactive from '../img/coin_inactive.png';
 import exchange from '../img/exchange.png';
+import exchange_inactive from '../img/exchange_inactive.png';
 import wiki from '../img/wiki.png';
+import wiki_inactive from '../img/wiki_inactive.png';
 
 
 const Sidebar = () => {
 
+    // the useLocation hook will detect the current url
     let location = useLocation();
     useEffect(() => {
         console.log(location.pathname);
     }, [location.pathname]);
+
+    // The navigation icons will change depending if active or not
+    const homeIcon = location.pathname === '/' ? home : home_inactive;
+    const coinsIcon = location.pathname === '/coins' ? coin : coin_inactive;
+    const exchangesIcon = location.pathname === '/exchanges' ? exchange : exchange_inactive;
+    const wikiIcon = location.pathname === '/wiki' ? wiki : wiki_inactive;
 
     return (
         <nav className="Sidebar">
@@ -31,7 +41,7 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
-                        <img src={ home } alt='menu home icon'/>
+                        <img src={ homeIcon } alt='menu homepage icon'/>
                         Homepage
                     </NavLink>
 
@@ -41,21 +51,7 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
-                        {
-                            <img
-                                src={ location.pathname === '/coins' ? coin : coin_inactive }
-                                alt='menu icon'
-                            />
-
-
-                        }
-
-                        {/*<img src={ (window.location.pathname === '/coins')*/}
-                        {/*    ? coin*/}
-                        {/*    : coin_inactive}*/}
-                        {/*     alt='menu coin icon'*/}
-                        {/*/>*/}
-                        {/*<img src={ isActive ? coin : coin_inactive } alt='menu coin icon'/>*/}
+                        <img src={ coinsIcon } alt='menu coins icon'/>
                         Coins
                     </NavLink>
 
@@ -65,7 +61,7 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
-                        <img src={ exchange } alt='menu exchanges icon'/>
+                        <img src={ exchangesIcon } alt='menu exchanges icon'/>
                         Exchanges
                     </NavLink>
 
@@ -75,7 +71,7 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
-                        <img src={ wiki } alt='menu wiki icon'/>
+                        <img src={ wikiIcon } alt='menu wiki icon'/>
                         Wiki
                     </NavLink>
                 </div>
