@@ -44,6 +44,7 @@ const Wiki = () => {
         data && setWikiData(JSON.parse(data));
     }, [setWikiData]);
 
+
     return (
         <section className="Wiki">
             <WikiItems />
