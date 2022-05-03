@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import axios from "axios";
 
 // Context
-import { MyStateManagement } from '../../Context/MyStateManagement';
+import { MyStateManagement } from '../Context/MyStateManagement';
 // Semantic-UI
 import { Container } from 'semantic-ui-react'
 // Components

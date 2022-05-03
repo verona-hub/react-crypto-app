@@ -3,7 +3,7 @@ import React from 'react';
 // Semantic-UI
 import { Table } from "semantic-ui-react";
 // Formatting function
-import { formatNumberToLocale, formatDollarPrice } from '../../../../utilities/Functions';
+import { formatNumberToLocale, formatDollarPrice } from '../../../utilities/Functions';
 
 
 const MarketTableItem = ({ item }) => {
