@@ -1,10 +1,11 @@
 import React, { useEffect }  from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 // Navigation Icons
-import logo from '../img/favicon.ico';
-import home from '../img/home.png';
 import coin from '../img/coin.png';
 import exchange from '../img/exchange.png';
+import home from '../img/home.png';
+import logo from '../img/favicon.ico';
+import market from '../img/market.png';
 import wiki from '../img/wiki.png';
 
 
@@ -42,7 +43,7 @@ const Sidebar = () => {
                             isActive ? 'active' : 'inactive'
                         )}
                     >
-                        <img src={ home } alt='menu homepage icon'/>
+                        <img src={ market } alt='menu homepage icon'/>
                         Market
                     </NavLink>
 
