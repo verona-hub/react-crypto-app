@@ -37,7 +37,7 @@ const Exchanges = () => {
             localStorage.setItem('exchangeData', JSON.stringify(response.data));
         }
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
-        // fetchData().then();
+        fetchData().then();
     }, []);
 
     // If present, load the exchangeData from the local storage

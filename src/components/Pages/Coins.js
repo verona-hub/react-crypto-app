@@ -29,7 +29,7 @@ const Coins = () => {
             setCoinsData(response.data);
         }
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
-        // fetchData().then();
+        fetchData().then();
     }, []);
 
 
