@@ -13,15 +13,27 @@ const MarketTableBody = () => {
 
     // Import state from Context
     const {
-        marketData, marketDataPage, setMarketDataPage,
+        marketData, marketDataPage,
         paginationStart, setPaginationStart,
         paginationFinish, setPaginationFinish
     } = useContext(MyStateManagement);
 
     useEffect( () => {
+        if(marketDataPage === 1) {
+            setPaginationStart(0);
+            setPaginationFinish(10);
+        }
         if(marketDataPage === 2) {
             setPaginationStart(10);
             setPaginationFinish(20);
+        }
+        if(marketDataPage === 3) {
+            setPaginationStart(20);
+            setPaginationFinish(30);
+        }
+        if(marketDataPage === 4) {
+            setPaginationStart(30);
+            setPaginationFinish(40);
         }
 
         console.log(`Start: ${paginationStart}`)

@@ -17,9 +17,14 @@ const MarketTableFooter = () => {
     const onClick1 = () => {
         setMarketDataPage(1);
     };
-
     const onClick2 = () => {
         setMarketDataPage(2);
+    };
+    const onClick3 = () => {
+        setMarketDataPage(3);
+    };
+    const onClick4 = () => {
+        setMarketDataPage(4);
     };
 
     return (
@@ -32,8 +37,8 @@ const MarketTableFooter = () => {
                         </Menu.Item>
                         <Menu.Item as='a' onClick={onClick1}>1</Menu.Item>
                         <Menu.Item as='a' onClick={onClick2}>2</Menu.Item>
-                        <Menu.Item as='a'>3</Menu.Item>
-                        <Menu.Item as='a'>4</Menu.Item>
+                        <Menu.Item as='a' onClick={onClick3}>3</Menu.Item>
+                        <Menu.Item as='a' onClick={onClick4}>4</Menu.Item>
                         <Menu.Item as='a' icon>
                             <Icon name='chevron right'/>
                         </Menu.Item>
