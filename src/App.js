@@ -15,6 +15,10 @@ const App = () => {
     /// Initial State Management
     // Components Data
     const [marketData, setMarketData] = useState([]);
+    const [marketDataPage, setMarketDataPage] = useState(1);
+    const [paginationStart, setPaginationStart] = useState(0);
+    const [paginationFinish, setPaginationFinish] = useState(10);
+
     const [coinsData, setCoinsData] = useState([]);
     const [exchangeData, setExchangeData] = useState([]);
     const [wikiData, setWikiData] = useState([]);
@@ -28,6 +32,9 @@ const App = () => {
         <BrowserRouter>
             <MyStateManagement.Provider value={{
                 marketData, setMarketData,
+                marketDataPage, setMarketDataPage,
+                paginationStart, setPaginationStart,
+                paginationFinish, setPaginationFinish,
                 coinsData, setCoinsData,
                 exchangeData, setExchangeData,
                 wikiData, setWikiData,

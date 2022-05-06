@@ -61,8 +61,13 @@ button,
     position: relative;
 }
 
+h1 {
+    margin: 50px !important;
+    text-align: center;
+}
+
 /*
-Navbar
+Sidebar
 */
 
 /* Leave this Semantic-UI setting */
@@ -93,14 +98,13 @@ Navbar
 .Sidebar .links img {
     margin: 5px;
     padding-right: 5px;
-    width: 40px;
+    width: 32px;
 }
 
 .Sidebar a {
     border-radius: 4px;
     color: var(--cream) !important;
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 7px 0;
     padding: 5px 0;
@@ -110,7 +114,7 @@ Navbar
 .Sidebar a.active {
     color: var(--white) !important;
     text-decoration: underline;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .Sidebar a.inactive {
@@ -190,10 +194,10 @@ Homepage
     text-align: center;
 }
 
-.Homepage h1,
-.Homepage h3 {
-    margin: 40px 0;
-}
+/*.Homepage h1,*/
+/*.Homepage h3 {*/
+/*    margin: 40px 0;*/
+/*}*/
 
 /*
 Search

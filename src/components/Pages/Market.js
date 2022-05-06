@@ -21,7 +21,7 @@ const Market = () => {
         params: {
             vs_currency: 'usd',
             order: 'market_cap_desc',
-            per_page: 10,
+            per_page: 20,
             page: 1
         },
         headers: {
@@ -54,7 +54,7 @@ const Market = () => {
     return (
         <main>
             <Container className='Market'>
-                <h2> Today's Cryptocurrency Prices by Market Cap </h2>
+                <h1> Today's Cryptocurrency Prices by Market Cap </h1>
                 <MarketTable/>
             </Container>
         </main>
