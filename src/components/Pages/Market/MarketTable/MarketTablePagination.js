@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import { Icon, Menu, Table } from "semantic-ui-react";
 
 // Context
 import { MyStateManagement } from '../../../Context/MyStateManagement';
 
 
-const MarketTableFooter = () => {
+const MarketTablePagination = () => {
 
     // Import state from Context
     const { marketDataPage, setMarketDataPage } = useContext(MyStateManagement);
@@ -14,18 +15,11 @@ const MarketTableFooter = () => {
         console.log(marketDataPage)
     });
 
-    const onClick1 = () => {
-        setMarketDataPage(1);
+    const changePage = e => {
+        const pageNumber = e.target.innerText;
+        setMarketDataPage(parseInt(pageNumber));
     };
-    const onClick2 = () => {
-        setMarketDataPage(2);
-    };
-    const onClick3 = () => {
-        setMarketDataPage(3);
-    };
-    const onClick4 = () => {
-        setMarketDataPage(4);
-    };
+
 
     return (
         <Table.Footer>
@@ -35,10 +29,10 @@ const MarketTableFooter = () => {
                         <Menu.Item as='a' icon>
                             <Icon name='chevron left'/>
                         </Menu.Item>
-                        <Menu.Item as='a' onClick={onClick1}>1</Menu.Item>
-                        <Menu.Item as='a' onClick={onClick2}>2</Menu.Item>
-                        <Menu.Item as='a' onClick={onClick3}>3</Menu.Item>
-                        <Menu.Item as='a' onClick={onClick4}>4</Menu.Item>
+                        <Menu.Item as='a' onClick={changePage}> 1 </Menu.Item>
+                        <Menu.Item as='a' onClick={changePage}> 2 </Menu.Item>
+                        <Menu.Item as='a' onClick={changePage}> 3 </Menu.Item>
+                        <Menu.Item as='a' onClick={changePage}> 4 </Menu.Item>
                         <Menu.Item as='a' icon>
                             <Icon name='chevron right'/>
                         </Menu.Item>
@@ -50,4 +44,4 @@ const MarketTableFooter = () => {
 };
 
 
-export default MarketTableFooter;
+export default MarketTablePagination;

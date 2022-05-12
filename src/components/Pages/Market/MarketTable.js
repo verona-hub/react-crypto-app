@@ -7,7 +7,7 @@ import 'semantic-ui-css/semantic.min.css';
 // Components
 import MarketTableHeader from "./MarketTable/MarketTableHeader";
 import MarketTableBody from "./MarketTable/MarketTableBody";
-import MarketTableFooter from "./MarketTable/MarketTableFooter";
+import MarketTablePagination from "./MarketTable/MarketTablePagination";
 
 
 const MarketTable = () => {
@@ -16,7 +16,7 @@ const MarketTable = () => {
             <Table>
                 <MarketTableHeader />
                 <MarketTableBody />
-                <MarketTableFooter />
+                <MarketTablePagination />
             </Table>
         </div>
     );

@@ -249,6 +249,10 @@ Market
 Table
 */
 
+.ui.table thead th {
+    width: 5% !important;
+}
+
 .oMwtR {
     text-align: center !important;
 }

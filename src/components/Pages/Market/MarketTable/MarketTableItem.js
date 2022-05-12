@@ -29,8 +29,7 @@ const MarketTableItem = ({ item }) => {
             <Table.Cell> {symbol.toUpperCase()} </Table.Cell>
             <Table.Cell> &#36;{current_price} </Table.Cell>
             <Table.Cell> &#36;{market_cap} </Table.Cell>
-            <Table.Cell
-                className={ numClass }>
+            <Table.Cell className={ numClass }>
                 {price_change_percentage_24h.toFixed(2)} &#37;
             </Table.Cell>
             <Table.Cell> {circulating_supply} {item.symbol.toUpperCase()} </Table.Cell>

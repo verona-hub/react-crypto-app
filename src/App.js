@@ -26,6 +26,7 @@ const App = () => {
     const [coin, setCoin] = useState('');
     const [search, setSearch] = useState('');
     const [showScrollButton, setShowScrollButton] = useState(false);
+    const [loading, setLoading] = useState(false);
 
 
     return (
@@ -40,7 +41,8 @@ const App = () => {
                 wikiData, setWikiData,
                 coin, setCoin,
                 search, setSearch,
-                showScrollButton, setShowScrollButton
+                showScrollButton, setShowScrollButton,
+                loading, setLoading
             }}>
 
                 <div className='App'>

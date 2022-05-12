@@ -9,7 +9,9 @@ import MarketTableItem from "./MarketTableItem";
 
 const MarketTableBody = () => {
 
-    const test = useRef(0);
+    const test = useRef(1);
+    console.log(window.location)
+
 
     // Import state from Context
     const {
@@ -35,12 +37,9 @@ const MarketTableBody = () => {
             setPaginationStart(30);
             setPaginationFinish(40);
         }
-
-        console.log(`Start: ${paginationStart}`)
-        console.log(`Finish: ${paginationFinish}`)
     }, [marketDataPage, paginationStart, setPaginationStart, paginationFinish, setPaginationFinish]);
 
-    let mapped = marketData
+    const table = marketData
         .slice(paginationStart, paginationFinish)
         .map(item => (
             <MarketTableItem
@@ -51,11 +50,8 @@ const MarketTableBody = () => {
 
 
     return (
-
         <Table.Body className='MarketTableBody'>
-            {
-                mapped
-            }
+            { table }
         </Table.Body>
     );
 };

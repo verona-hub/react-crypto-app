@@ -7,7 +7,7 @@ const MarketTableHeader = () => {
         <Table.Header>
             <Table.Row>
                 <Table.HeaderCell> # </Table.HeaderCell>
-                <Table.HeaderCell> Name </Table.HeaderCell>
+                <Table.HeaderCell className="marketCoinName"> Name </Table.HeaderCell>
                 <Table.HeaderCell> Symbol </Table.HeaderCell>
                 <Table.HeaderCell> Price </Table.HeaderCell>
                 <Table.HeaderCell> Market Cap </Table.HeaderCell>
@@ -17,5 +17,6 @@ const MarketTableHeader = () => {
         </Table.Header>
     );
 };
+
 
 export default MarketTableHeader;
