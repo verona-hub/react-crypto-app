@@ -10,14 +10,39 @@ const MarketTablePagination = () => {
     // Import state from Context
     const { currentTablePage, setCurrentTablePage } = useContext(MyStateManagement);
 
-    useEffect( () => {
-        console.log(currentTablePage)
-    });
+    // useEffect( () => {
+    //     console.log(currentTablePage)
+    // });
 
     const onPageClick = e => {
+        // set the current link page to be the currentTablePage state
         const pageNumber = e.target.innerText;
         setCurrentTablePage(parseInt(pageNumber));
+
+        const allElements = e.target.parentElement.childNodes;
+        // remove the active class from the links
+        const removeActive = () => {
+            allElements.forEach( element => {
+                if(element.classList.contains('active')){
+                    element.classList.remove('active');
+                }
+            });
+        };
+
+        // add the active class to the clicked link
+        const addActive = () => {
+            e.target.classList.add('active');
+            allElements.forEach(element => {
+                if(currentTablePage){
+                    console.log(currentTablePage)
+                }
+            });
+        };
+
+        removeActive();
+        addActive();
     };
+
 
     const onChevronLeft = () => {
         currentTablePage > 1 ? setCurrentTablePage(prevState => prevState - 1) : setCurrentTablePage(1);
@@ -38,7 +63,7 @@ const MarketTablePagination = () => {
                             <Icon name='chevron left'/>
                         </Menu.Item>
 
-                        <Menu.Item as='a' onClick={onPageClick}> 1 </Menu.Item>
+                        <Menu.Item as='a' onClick={onPageClick} active> 1 </Menu.Item>
                         <Menu.Item as='a' onClick={onPageClick}> 2 </Menu.Item>
                         <Menu.Item as='a' onClick={onPageClick}> 3 </Menu.Item>
                         <Menu.Item as='a' onClick={onPageClick}> 4 </Menu.Item>
