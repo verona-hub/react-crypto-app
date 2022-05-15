@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Table } from "semantic-ui-react";
 
 // Context
@@ -9,35 +9,55 @@ import MarketTableItem from "./MarketTableItem";
 
 const MarketTableBody = () => {
 
-    const test = useRef(1);
-    console.log(window.location)
-
-
     // Import state from Context
     const {
-        marketData, marketDataPage,
+        marketData, currentTablePage,
         paginationStart, setPaginationStart,
         paginationFinish, setPaginationFinish
     } = useContext(MyStateManagement);
 
     useEffect( () => {
-        if(marketDataPage === 1) {
+        if(currentTablePage === 1) {
             setPaginationStart(0);
             setPaginationFinish(10);
         }
-        if(marketDataPage === 2) {
+        if(currentTablePage === 2) {
             setPaginationStart(10);
             setPaginationFinish(20);
         }
-        if(marketDataPage === 3) {
+        if(currentTablePage === 3) {
             setPaginationStart(20);
             setPaginationFinish(30);
         }
-        if(marketDataPage === 4) {
+        if(currentTablePage === 4) {
             setPaginationStart(30);
             setPaginationFinish(40);
         }
-    }, [marketDataPage, paginationStart, setPaginationStart, paginationFinish, setPaginationFinish]);
+        if(currentTablePage === 5) {
+            setPaginationStart(40);
+            setPaginationFinish(50);
+        }
+        if(currentTablePage === 6) {
+            setPaginationStart(50);
+            setPaginationFinish(60);
+        }
+        if(currentTablePage === 7) {
+            setPaginationStart(60);
+            setPaginationFinish(70);
+        }
+        if(currentTablePage === 8) {
+            setPaginationStart(70);
+            setPaginationFinish(80);
+        }
+        if(currentTablePage === 9) {
+            setPaginationStart(80);
+            setPaginationFinish(90);
+        }
+        if(currentTablePage === 10) {
+            setPaginationStart(90);
+            setPaginationFinish(100);
+        }
+    }, [currentTablePage, paginationStart, setPaginationStart, paginationFinish, setPaginationFinish]);
 
     const table = marketData
         .slice(paginationStart, paginationFinish)
