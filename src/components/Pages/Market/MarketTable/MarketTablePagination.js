@@ -10,33 +10,36 @@ const MarketTablePagination = () => {
     // Import state from Context
     const { currentTablePage, setCurrentTablePage } = useContext(MyStateManagement);
 
-    // useEffect( () => {
-    //     console.log(currentTablePage)
-    // });
+    useEffect( () => {
+        const menu = document.querySelectorAll('.ui.menu');
+        menu.forEach(item => {
+            const children = item.childNodes;
+            children.forEach(child => {
+                // remove the active class from the links
+                child.classList.remove('active');
+                // add the active class to the selected link if the currentTablePage is matching
+                currentTablePage == child.innerText && child.classList.add('active');
+            });
+        });
+
+    }, [currentTablePage]);
 
     const onPageClick = e => {
         // set the current link page to be the currentTablePage state
         const pageNumber = e.target.innerText;
         setCurrentTablePage(parseInt(pageNumber));
 
-        const allElements = e.target.parentElement.childNodes;
         // remove the active class from the links
+        const allElements = e.target.parentElement.childNodes;
         const removeActive = () => {
             allElements.forEach( element => {
-                if(element.classList.contains('active')){
-                    element.classList.remove('active');
-                }
+                element.classList.contains('active') && element.classList.remove('active');
             });
         };
 
         // add the active class to the clicked link
         const addActive = () => {
             e.target.classList.add('active');
-            allElements.forEach(element => {
-                if(currentTablePage){
-                    console.log(currentTablePage)
-                }
-            });
         };
 
         removeActive();
