@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 // Context
-import { MyStateManagement } from '../../Context/MyStateManagement';
+// import { MyStateManagement } from '../../Context/MyStateManagement';
 // Components
 import SearchForm from "./Search/SearchForm";
 
@@ -9,10 +9,10 @@ import SearchForm from "./Search/SearchForm";
 const Search = () => {
 
     // Import state from Context
-    const {
-        coin, setCoin,
-        search, setSearch
-    } = useContext(MyStateManagement);
+    // const {
+    //     coin, setCoin,
+    //     search, setSearch
+    // } = useContext(MyStateManagement);
 
     const searchCoin = async () => {
         console.log('Coin searched')

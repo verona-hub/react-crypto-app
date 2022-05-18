@@ -1,5 +1,5 @@
-import React, { useEffect }  from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 // Navigation Icons
 import coin from '../img/coin.png';
 import exchange from '../img/exchange.png';
@@ -10,13 +10,6 @@ import wiki from '../img/wiki.png';
 
 
 const Sidebar = () => {
-
-    // the useLocation hook will detect the current url
-    // let location = useLocation();
-    // useEffect(() => {
-    //     console.log(location.pathname);
-    // }, [location.pathname]);
-
 
     return (
         <nav className="Sidebar">

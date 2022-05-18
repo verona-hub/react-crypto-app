@@ -58,7 +58,14 @@ button,
 
 .Main {
     margin-left: 205px;
-    position: relative;
+    /*width: 100%;*/
+    width: calc(100% - 205px);
+}
+
+.Sidebar,
+.Main {
+    position: fixed;
+    top: 0;
 }
 
 h1 {
@@ -81,8 +88,6 @@ Sidebar
     bottom: 0;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 0;
 }
 
 .Sidebar .logo img {
@@ -124,6 +129,43 @@ Sidebar
 .Sidebar a.inactive:hover {
     color: var(--white) !important;
     text-decoration: underline;
+}
+
+/*
+Spinner
+*/
+
+.Modal {
+    background-color: var(--grey_dark);
+    height: 100%;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.Spinner {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    right: 0;
+    text-align: center;
+    top: 35%;
+}
+
+.x-modal {
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 /*

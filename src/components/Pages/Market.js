@@ -12,7 +12,7 @@ import MarketTable from "./Market/MarketTable";
 const Market = () => {
 
     // Import state from Context
-    const { setMarketData } = useContext(MyStateManagement);
+    const { setMarketData, setLoading } = useContext(MyStateManagement);
 
     // Api request params: get market data from CoinGecko
     const config = {
@@ -34,15 +34,18 @@ const Market = () => {
     useEffect(() => {
         const fetchData = async () => {
             const response = await axios(config);
+            setLoading(true);
 
             // Save the data to marketData state
             setMarketData(response.data);
+            // Disable the spinner after some time
+            setTimeout(() => { setLoading(false)}, 1500)
             // Save the data to the local storage
             localStorage.setItem('marketData', JSON.stringify(response.data));
         }
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
-        fetchData().then();
-    }, [config, setMarketData]);
+        fetchData().then()
+    }, []);
 
     // If present, load the marketData from the local storage
     useEffect( () => {

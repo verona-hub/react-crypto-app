@@ -8,20 +8,21 @@ import { MyStateManagement } from './components/Context/MyStateManagement';
 // Components
 import Main from "./components/Main";
 import Sidebar from "./components/Sidebar";
+import Spinner from './components/utilities/Spinner';
 
 
 const App = () => {
 
     /// Initial State Management
-    // Components Data
+    // API Data
     const [marketData, setMarketData] = useState([]);
-    const [currentTablePage, setCurrentTablePage] = useState(1);
-    const [paginationStart, setPaginationStart] = useState(0);
-    const [paginationFinish, setPaginationFinish] = useState(10);
-
     const [coinsData, setCoinsData] = useState([]);
     const [exchangeData, setExchangeData] = useState([]);
     const [wikiData, setWikiData] = useState([]);
+    // Market Table pagination
+    const [currentTablePage, setCurrentTablePage] = useState(1);
+    const [paginationStart, setPaginationStart] = useState(0);
+    const [paginationFinish, setPaginationFinish] = useState(10);
     // Other states
     const [coin, setCoin] = useState('');
     const [search, setSearch] = useState('');
@@ -33,12 +34,12 @@ const App = () => {
         <BrowserRouter>
             <MyStateManagement.Provider value={{
                 marketData, setMarketData,
-                currentTablePage, setCurrentTablePage,
-                paginationStart, setPaginationStart,
-                paginationFinish, setPaginationFinish,
                 coinsData, setCoinsData,
                 exchangeData, setExchangeData,
                 wikiData, setWikiData,
+                currentTablePage, setCurrentTablePage,
+                paginationStart, setPaginationStart,
+                paginationFinish, setPaginationFinish,
                 coin, setCoin,
                 search, setSearch,
                 showScrollButton, setShowScrollButton,
@@ -48,6 +49,7 @@ const App = () => {
                 <div className='App'>
                     <Sidebar />
                     <Main />
+                    <Spinner />
                 </div>
 
             </MyStateManagement.Provider>
