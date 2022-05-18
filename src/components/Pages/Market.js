@@ -42,7 +42,7 @@ const Market = () => {
         }
         // added empty .then() because of Idea bug: "Promise returned from fetchData is ignored"
         fetchData().then();
-    }, []);
+    }, [config, setMarketData]);
 
     // If present, load the marketData from the local storage
     useEffect( () => {
