@@ -9,24 +9,24 @@ const Spinner = () => {
     // import state from Context
     const { loading, setLoading } = useContext(MyStateManagement);
 
-    const onClick = () => {
+    const closeModal = () => {
         setLoading(false);
     };
 
     return (
-        <>
+        <section>
             { loading && (
-                <section className="Modal">
+                <div className="Modal">
                     <div className="Spinner">
                         <PacmanLoader
                             color={ '#fff' }
                             size={ 80 }
                         />
                     </div>
-                    <div className="x-modal" onClick={ onClick }> X</div>
-                </section>
+                    <div className="x-modal" onClick={ closeModal }> X</div>
+                </div>
             )}
-        </>
+        </section>
     );
 };
 

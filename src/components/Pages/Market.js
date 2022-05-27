@@ -33,8 +33,8 @@ const Market = () => {
     // Fetch the Api data
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios(config);
             setLoading(true);
+            const response = await axios(config);
 
             // Save the data to marketData state
             setMarketData(response.data);

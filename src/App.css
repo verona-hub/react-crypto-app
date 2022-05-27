@@ -161,6 +161,7 @@ Spinner
 
 .x-modal {
     color: var(--white);
+    cursor: pointer;
     font-size: 1.4rem;
     font-weight: bold;
     position: absolute;
