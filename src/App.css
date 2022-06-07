@@ -233,14 +233,8 @@ Homepage
 */
 
 .Homepage {
-    /*margin: 20px 10px;*/
     text-align: center;
 }
-
-/*.Homepage h1,*/
-/*.Homepage h3 {*/
-/*    margin: 40px 0;*/
-/*}*/
 
 /*
 Search
@@ -268,15 +262,32 @@ Search
     word-break: normal;
 }
 
-.Search input[type="text"]:hover {
-    opacity: 0.6;
+.Search input[type="text"]:focus {
+    /*outline-style: solid;*/
+    opacity: 0.8;
+    box-shadow: 0 0 0 1px;
 }
 
 .SearchForm img {
     position: relative;
     right: 90px;
-    top: 48px;
+    top: 46px;
     width: 18px;
+}
+
+/*
+SearchedCoin
+*/
+
+.SearchedCoin {
+    background-color: lightcoral;
+    border: 1px solid;
+    margin: 100px 0;
+    padding: 20px;
+}
+
+.SearchedCoin .coin-id {
+    text-transform:capitalize;
 }
 
 /*

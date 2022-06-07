@@ -8,24 +8,23 @@ import { MyStateManagement } from '../../../Context/MyStateManagement';
 const SearchForm = ({ searchCoin }) => {
 
     // Import state from Context
-    const { coin, setCoin, search, setSearch, setLoading } = useContext(MyStateManagement);
+    const { searchedCoin, setSearchedCoin, setLoading } = useContext(MyStateManagement);
 
     const onFormSubmit = (e) => {
         console.log('Form submitted...');
-        console.log(`Searched coin: ${coin}`);
+        console.log(`Searched coin: ${searchedCoin}`);
 
-        // Send the input coin to the CoinMarketCap API
-        searchCoin(coin);
+        // Send the input coin to the CoinGecko API
+        searchCoin(searchedCoin);
         setLoading(true);
         // Set the input to the initial value
-        setSearch('');
+        setSearchedCoin('');
         e.preventDefault();
     };
 
     const onInputChange = e => {
         // Save the input text
-        setSearch(e.target.value);
-        // setCoin(e.target.value);
+        setSearchedCoin(e.target.value);
     };
 
     return (
@@ -36,7 +35,7 @@ const SearchForm = ({ searchCoin }) => {
                 onChange={ onInputChange }
                 placeholder='Search a currency here'
                 type='text'
-                value={ search }
+                value={ searchedCoin }
             />
             <input
                 className='button'

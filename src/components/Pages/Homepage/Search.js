@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 // Context
 import { MyStateManagement } from '../../Context/MyStateManagement';
@@ -10,18 +11,14 @@ import SearchForm from "./Search/SearchForm";
 const Search = () => {
 
     // Import state from Context
-    const { coin, setCoin, search, setSearch, loading, setLoading } = useContext(MyStateManagement);
+    const { setCoin, searchedCoin, setLoading } = useContext(MyStateManagement);
+    let navigate = useNavigate();
 
     const searchCoin = async () => {
 
-        console.log('Coin searched');
-
         const config = {
             method: 'GET',
-            url: `https://api.coingecko.com/api/v3/coins/`,
-            params: {
-                id: `${coin}`
-            },
+            url: `https://api.coingecko.com/api/v3/coins/${searchedCoin}`,
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -31,15 +28,17 @@ const Search = () => {
         try {
             await axios(config)
                 .then( response => {
-                    setCoin(coin);
+                    setCoin(response.data);
 
                     // When data is fetched, remove the spinner
                     response && setTimeout(() => { setLoading(false)}, 2000);
-                    console.log(response.data[0]);
+                    console.log(response.data);
+                    navigate('/market');
                 })
-
         } catch (err) {
             console.log(err)
+            // Remove the loading spinner with modal if the search is not successful
+            setTimeout(() => { setLoading(false)},2000);
         }
     };
 

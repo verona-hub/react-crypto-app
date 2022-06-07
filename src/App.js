@@ -25,7 +25,7 @@ const App = () => {
     const [paginationFinish, setPaginationFinish] = useState(10);
     // Other states
     const [coin, setCoin] = useState('');
-    const [search, setSearch] = useState('');
+    const [searchedCoin, setSearchedCoin] = useState('');
     const [showScrollButton, setShowScrollButton] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -41,7 +41,7 @@ const App = () => {
                 paginationStart, setPaginationStart,
                 paginationFinish, setPaginationFinish,
                 coin, setCoin,
-                search, setSearch,
+                searchedCoin, setSearchedCoin,
                 showScrollButton, setShowScrollButton,
                 loading, setLoading
             }}>
