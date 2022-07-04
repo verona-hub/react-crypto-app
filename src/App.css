@@ -58,12 +58,10 @@ button,
 
 .Main {
     margin-left: 205px;
-    /*width: 100%;*/
     width: calc(100% - 205px);
 }
 
-.Sidebar,
-.Main {
+.Sidebar {
     position: fixed;
     top: 0;
 }
@@ -174,8 +172,9 @@ Footer
 */
 
 footer {
+    bottom: 0;
     height: 200px;
-    margin-top: 150px;
+    position: relative;
 }
 
 .Footer {

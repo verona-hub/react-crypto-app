@@ -33,7 +33,7 @@ const Search = () => {
                     // When data is fetched, remove the spinner
                     response && setTimeout(() => { setLoading(false)}, 2000);
                     console.log(response.data);
-                    navigate('/market');
+                    navigate('/searchedCoin');
                 })
         } catch (err) {
             console.log(err)

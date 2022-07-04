@@ -4,7 +4,7 @@ import axios from "axios";
 // Context
 import { MyStateManagement } from '../Context/MyStateManagement';
 // Semantic-UI
-import { Container } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react';
 // Components
 import MarketTable from "./Market/MarketTable";
 
