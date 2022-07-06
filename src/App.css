@@ -225,6 +225,29 @@ Scroll To Top
 }
 
 /*
+PageNotFound404
+*/
+
+.PageNotFound404 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.PageNotFound404 h1 {
+    margin: 50px !important;
+}
+
+.PageNotFound404 .travolta-wrapper {
+    margin: 100px;
+}
+
+.PageNotFound404 img {
+    width: 120%;
+}
+
+/*
 Homepage
 */
 

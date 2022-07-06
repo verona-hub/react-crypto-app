@@ -6,6 +6,7 @@ import Coins from "./Pages/Coins";
 import Exchanges from "./Pages/Exchanges";
 import Homepage from "./Pages/Homepage";
 import Market from './Pages/Market';
+import PageNotFound404 from './Pages/404/PageNotFound404';
 import Wiki from "./Pages/Wiki";
 
 
@@ -31,6 +32,10 @@ const Routing = () => {
             <Route
                 path='wiki'
                 element={ <Wiki/> }
+            />
+            <Route
+                path='*'
+                element={ <PageNotFound404 /> }
             />
         </Routes>
     );
