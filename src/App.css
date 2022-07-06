@@ -52,22 +52,14 @@ button,
     padding: 10px 30px;
 }
 
-.Sidebar {
-    width: 200px;
-}
-
 .Main {
-    margin-left: 205px;
-    width: calc(100% - 205px);
+    margin-left: 200px;
+    width: calc(100% - 200px);
 }
 
-.Sidebar {
-    position: fixed;
-    top: 0;
-}
 
 h1 {
-    margin: 50px !important;
+    padding-top: 50px !important;
     text-align: center;
 }
 
@@ -86,6 +78,9 @@ Sidebar
     bottom: 0;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 200px;
 }
 
 .Sidebar .logo img {
@@ -173,8 +168,9 @@ Footer
 
 footer {
     bottom: 0;
-    height: 200px;
+    margin-top: 50px;
     position: relative;
+    width: 100%;
 }
 
 .Footer {
@@ -188,6 +184,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 50px;
     width: 100%;
 }
 
@@ -210,7 +207,7 @@ Scroll To Top
 }
 
 .ScrollToTop img {
-    bottom: 220px;
+    bottom: 260px;
     position: fixed;
     right: 10px;
     transform: rotate(180deg);
