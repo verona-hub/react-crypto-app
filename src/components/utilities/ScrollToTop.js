@@ -14,7 +14,7 @@ const ScrollToTop = () => {
     // If scrolled to a certain point, the scroll to top button will appear/disappear
     useEffect( () => {
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > window.innerHeight * 0.1) {
+            if (window.pageYOffset > window.innerHeight * 0.7) {
                 setShowScrollButton(true);
             } else {
                 setShowScrollButton(false);

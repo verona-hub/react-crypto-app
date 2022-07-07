@@ -12,7 +12,7 @@ const ConfusedTravolta = () => {
             <div className='text'>
                 <h1> Oops! The page you requested cannot be found. </h1>
                 <p> It seems that the page you were trying to reach does not exist or it
-                    was moved. We suggest you to go back or start again from the homepage.
+                    was moved. We suggest you to choose wisely.
                 </p>
             </div>
         </section>

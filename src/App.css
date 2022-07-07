@@ -207,7 +207,7 @@ Scroll To Top
 }
 
 .ScrollToTop img {
-    bottom: 260px;
+    bottom: 50vh;
     position: fixed;
     right: 10px;
     transform: rotate(180deg);
@@ -229,8 +229,7 @@ PageNotFound404
 */
 
 .PageNotFound404,
-.ConfusedTravolta,
-.MorpheusPills {
+.ConfusedTravolta {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -251,13 +250,28 @@ PageNotFound404
     text-transform: uppercase;
 }
 
+.MorpheusPills .image-wrapper {
+    position: relative;
+}
+
 .MorpheusPills img {
     width: 100%;
 }
 
-.MorpheusPills button {
+.MorpheusPills .buttons-wrapper {
+    position: relative;
 }
 
+.MorpheusPills .go-back {
+    position: absolute;
+    left: 33%;
+    /*left: 28vw;*/
+    bottom: 450%;
+}
+
+.MorpheusPills .go-home {
+
+}
 
 /*
 Homepage
