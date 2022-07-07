@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import morpheus_pills from "../../../img/morpheus-pills.jpg";
 
 
-const MorpheusPill = () => {
+const MorpheusPills = () => {
     return (
         <section className='MorpheusPills'>
             <img src={ morpheus_pills } alt='Morpheus from Matrix offering pills'/>
@@ -16,4 +16,4 @@ const MorpheusPill = () => {
 };
 
 
-export default MorpheusPill;
+export default MorpheusPills;
