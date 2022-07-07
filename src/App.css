@@ -1,6 +1,7 @@
 :root {
     --black: #000;
     --blue: #093545;
+    --blue_pill: #2c58e2;
     --cream: #eeedec;
     --green: #30b630;
     --grey: #9c9b9b;
@@ -225,7 +226,7 @@ Scroll To Top
 }
 
 /*
-PageNotFound404
+PageNotFound404 - Travolta gif
 */
 
 .PageNotFound404,
@@ -250,27 +251,40 @@ PageNotFound404
     text-transform: uppercase;
 }
 
-.MorpheusPills .image-wrapper {
+/*
+PageNotFound404 - Morpheus pills
+*/
+
+.MorpheusPills {
     position: relative;
 }
 
-.MorpheusPills img {
+.MorpheusPills .image-wrapper img {
     width: 100%;
 }
 
 .MorpheusPills .buttons-wrapper {
     position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 23%;
+    bottom: 18vh;
 }
 
-.MorpheusPills .go-back {
-    position: absolute;
-    left: 33%;
-    /*left: 28vw;*/
-    bottom: 450%;
+.MorpheusPills button {
+    color: var(--white);
+    border: 1px solid white;
+    border-radius: 36px;
+    margin: auto;
+    padding: 12px 32px;
 }
 
-.MorpheusPills .go-home {
+.MorpheusPills .go-back button {
+    background-color: var(--red);
+}
 
+.MorpheusPills .go-home button {
+    background-color: var(--blue_pill);
 }
 
 /*
