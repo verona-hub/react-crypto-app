@@ -228,24 +228,36 @@ Scroll To Top
 PageNotFound404
 */
 
-.PageNotFound404 {
+.PageNotFound404,
+.ConfusedTravolta,
+.MorpheusPills {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.PageNotFound404 h1 {
-    margin: 50px !important;
+.ConfusedTravolta {
+    height: 100vh;
 }
 
-.PageNotFound404 .travolta-wrapper {
-    margin: 100px;
-}
-
-.PageNotFound404 img {
+.ConfusedTravolta img {
     width: 120%;
 }
+
+.ConfusedTravolta h1 {
+    margin: 0 !important;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.MorpheusPills img {
+    width: 100%;
+}
+
+.MorpheusPills button {
+}
+
 
 /*
 Homepage
