@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link, useNavigate} from 'react-router-dom';
-
 // Morpheus Pills image
 import morpheus_pills from "../../../img/morpheus-pills.jpg";
 
@@ -8,7 +7,6 @@ import morpheus_pills from "../../../img/morpheus-pills.jpg";
 const MorpheusPills = () => {
 
     const navigate = useNavigate();
-
 
     return (
         <section className='MorpheusPills'>
