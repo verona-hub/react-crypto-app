@@ -315,11 +315,19 @@ Hover::after
 */
 
 .MorpheusPills button:hover::before {
-    /*opacity: 0;*/
+    opacity: 0;
+}
+
+.MorpheusPills .go-back button:hover::before {
+    /*border: 12px solid var(--red);*/
+}
+
+.MorpheusPills .go-home button:hover::before {
+    /*border: 12px solid var(--blue_pill);*/
 }
 
 .MorpheusPills button:hover::after {
-    /*opacity: 1;*/
+    opacity: 1;
 }
 
 /*
