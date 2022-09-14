@@ -286,7 +286,7 @@ Button
     outline: none;
     padding: 23px 33px;
     position: relative;
-    transition: color 0.5s, transform 0.2s, background-color 0.2s;
+    transition: color 500ms, transform 500ms, background-color 200ms;
 }
 
 /*
@@ -296,6 +296,7 @@ Hover*
 .MorpheusPills button:hover {
     background-color: transparent;
     box-shadow: none;
+    transform: scale(1.1);
 }
 
 .MorpheusPills .go-back button:hover {
@@ -314,12 +315,11 @@ Hover::after
 */
 
 .MorpheusPills button:hover::before {
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 .MorpheusPills button:hover::after {
-    opacity: 1;
-    /*transform: scaleX(1) scaleY(1);*/
+    /*opacity: 1;*/
 }
 
 /*
@@ -327,11 +327,9 @@ Active
 */
 
 .MorpheusPills button:active {
-    transform: translateY(3px);
-}
-
-.MorpheusPills button:active::after,
-.MorpheusPills button:active::before {
+    transition: transform 2000ms;
+    /*transform: translateY(3px);*/
+    transform: scale(1.8);
 }
 
 /*
@@ -339,7 +337,6 @@ Before
 */
 
 .MorpheusPills button::before {
-    border-radius: 3px;
     content: "";
     left: 0;
     height: 100%;
@@ -355,14 +352,13 @@ After
 
 .MorpheusPills button::after {
     background-color: transparent;
-    border-radius: 3px;
     content: "";
     height: 100%;
     left: 0;
     opacity: 0;
     position: absolute;
     transition: transform 0.3s, opacity 0.3s;
-    transform: scaleX(1.1) scaleY(1.3);
+    transform: scaleX(1.1) scaleY(1.1);
     top: 0;
     width: 100%;
     z-index: -1;
