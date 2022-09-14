@@ -271,27 +271,27 @@ PageNotFound404 - Morpheus pills
     bottom: 18vh;
 }
 
-.MorpheusPills .go-back button {
-}
-
-.MorpheusPills .go-home button {
-    background-color: var(--blue_pill);
-}
+/*
+Button
+*/
 
 .MorpheusPills button {
-    position: relative;
-    border: none;
-    font-size: 18px;
-    transition: color 0.5s, transform 0.2s, background-color 0.2s;
-    outline: none;
-    border-radius: 3px;
-    margin: 0 10px;
-    padding: 23px 33px;
-    border: 2px solid transparent;
-
     background-color: transparent;
+    border: none;
+    border: 3px solid transparent;
+    border-radius: 3px;
     color: var(--cream);
+    font-size: 18px;
+    margin: 0 10px;
+    outline: none;
+    padding: 23px 33px;
+    position: relative;
+    transition: color 0.5s, transform 0.2s, background-color 0.2s;
 }
+
+/*
+Hover*
+*/
 
 .MorpheusPills button:hover {
     background-color: transparent;
@@ -299,59 +299,74 @@ PageNotFound404 - Morpheus pills
 }
 
 .MorpheusPills .go-back button:hover {
-    border: 2px solid var(--red);
+    border: 3px solid var(--red);
     color: var(--red);
 }
 
 .MorpheusPills .go-home button:hover {
-    border: 2px solid var(--blue_pill);
+    border: 3px solid var(--blue_pill);
     color: var(--blue_pill);
 }
+
+/*
+Hover::before
+Hover::after
+*/
 
 .MorpheusPills button:hover::before {
     opacity: 0;
 }
 
 .MorpheusPills button:hover::after {
-    /*opacity: 1;*/
-    /*transform: scaleX(1) scaleY(1);*/
+    opacity: 1;
 }
+
+/*
+Active
+*/
 
 .MorpheusPills button:active {
-    transform: translateY(1px);
+    transform: translateY(3px);
 }
+
+.MorpheusPills button:active::after,
+.MorpheusPills button:active::before {
+}
+
+/*
+Before
+*/
+
+.MorpheusPills button::before {
+    border: 3px solid var(--white);
+    border-radius: 3px;
+    content: "";
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: opacity 0.3s, border 0.3s;
+    width: 100%;
+}
+
+/*
+After
+*/
 
 .MorpheusPills button::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-color: transparent;
-    border: 2px solid var(--red);
-    opacity: 0;
-    z-index: -1;
-    transform: scaleX(1.1) scaleY(1.3);
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-.MorpheusPills button::after,
-.MorpheusPills button::before {
     border-radius: 3px;
-}
-
-.MorpheusPills button::before {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    border: 2px solid var(--white);
-    transition: opacity 0.3s, border 0.3s;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: scaleX(1.1) scaleY(1.3);
+    top: 0;
+    width: 100%;
+    z-index: -1;
 }
-
 
 
 
