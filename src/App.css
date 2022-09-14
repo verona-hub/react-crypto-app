@@ -278,7 +278,7 @@ Button
 .MorpheusPills button {
     background-color: transparent;
     border: none;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     border-radius: 3px;
     color: var(--cream);
     font-size: 18px;
@@ -299,12 +299,12 @@ Hover*
 }
 
 .MorpheusPills .go-back button:hover {
-    border: 3px solid var(--red);
+    border: 2px solid var(--red);
     color: var(--red);
 }
 
 .MorpheusPills .go-home button:hover {
-    border: 3px solid var(--blue_pill);
+    border: 2px solid var(--blue_pill);
     color: var(--blue_pill);
 }
 
@@ -319,6 +319,7 @@ Hover::after
 
 .MorpheusPills button:hover::after {
     opacity: 1;
+    transform: scaleX(1) scaleY(1);
 }
 
 /*
@@ -338,7 +339,7 @@ Before
 */
 
 .MorpheusPills button::before {
-    border: 3px solid var(--white);
+    /*border: 2px solid var(--white);*/
     border-radius: 3px;
     content: "";
     left: 0;
@@ -349,12 +350,23 @@ Before
     width: 100%;
 }
 
+.MorpheusPills .go-back button::before {
+    border: 2px solid var(--red);
+    color: pink;
+}
+
+.MorpheusPills .go-home button::before {
+    border: 2px solid var(--blue_pill);
+    color: orange;
+}
+
 /*
 After
 */
 
 .MorpheusPills button::after {
     background-color: transparent;
+    /*border: 2px solid var(--white);*/
     border-radius: 3px;
     content: "";
     height: 100%;
