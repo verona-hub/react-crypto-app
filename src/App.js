@@ -28,6 +28,7 @@ const App = () => {
     const [searchedCoin, setSearchedCoin] = useState('');
     const [showScrollButton, setShowScrollButton] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [currentPath, setCurrentPath] = useState('/');
 
 
     return (
@@ -43,7 +44,8 @@ const App = () => {
                 coin, setCoin,
                 searchedCoin, setSearchedCoin,
                 showScrollButton, setShowScrollButton,
-                loading, setLoading
+                loading, setLoading,
+                currentPath, setCurrentPath
             }}>
 
                 <div className='App'>
